@@ -4,21 +4,24 @@
   "description": "",
   "main": "webpack.config.dev.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build:dev": "webpack-dev-server --config ./webpack.dev.config.js",
     "build": "webpack",
     "build:local": "webpack --env.NODE_ENV=local",
-    "build:prod": "webpack --env.NODE_ENV=produccion"
+    "build:prod": "webpack -p --env.NODE_ENV=production"
   },
   "repository": {
     "type": "git",
-    "url": "react"
+    "url": "https://github.com/jjyepez/platzi-video"
   },
   "keywords": [
     "@jjyepez"
   ],
   "author": "jjyepez <jjyepez@gmail.com>",
   "license": "MIT",
+  "dependencies": {
+    "react": "16.1.1",
+    "react-dom": "16.1.1"
+  },
   "devDependencies": {
     "babel-core": "6.26.0",
     "babel-loader": "7.1.2",
