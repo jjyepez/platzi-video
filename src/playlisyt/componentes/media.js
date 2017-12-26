@@ -2,11 +2,20 @@ import React, { Component } from 'react';
 
 class Media extends Component {
 	render() {
+		const estilos = {
+			contenedor: {
+				color: 'teal',
+				fontSize: 20,
+				cursor: 'pointer',
+				width: 260,
+				border: '1px solid red'
+			}
+		}
 		return (
-			<div>
+			<div style={estilos.contenedor}>
 				<div>
 					<img
-						src=""
+						src="./img/covers/bitcoin.jpg"
 						alt=""
 						width={260}
 						height={160}
@@ -19,4 +28,4 @@ class Media extends Component {
 	}
 }
 
-export default Media;
+export default Media
