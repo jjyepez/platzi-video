@@ -60,11 +60,26 @@
 /******/ 	__webpack_require__.p = "./dist/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 17);
+/******/ 	return __webpack_require__(__webpack_require__.s = 18);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports = __webpack_require__(19);
+} else {
+  module.exports = __webpack_require__(20);
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+
+/***/ }),
+/* 1 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -254,7 +269,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 1 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -294,21 +309,6 @@ emptyFunction.thatReturnsArgument = function (arg) {
 };
 
 module.exports = emptyFunction;
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
-
-if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(18);
-} else {
-  module.exports = __webpack_require__(19);
-}
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 3 */
@@ -465,7 +465,7 @@ function invariant(condition, format, a, b, c, d, e, f) {
 }
 
 module.exports = invariant;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
 /* 5 */
@@ -489,7 +489,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 module.exports = emptyObject;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
 /* 6 */
@@ -506,7 +506,7 @@ module.exports = emptyObject;
 
 
 
-var emptyFunction = __webpack_require__(1);
+var emptyFunction = __webpack_require__(2);
 
 /**
  * Similar to invariant but only logs a warning if the condition is not met.
@@ -558,10 +558,45 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 module.exports = warning;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
 /* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Icon(props) {
+	var color = props.color,
+	    size = props.size;
+
+	return _react2.default.createElement(
+		"svg",
+		{
+			fill: color,
+			height: size,
+			width: size,
+			viewBox: "0 0 32 32"
+		},
+		props.children
+	);
+}
+
+exports.default = Icon;
+
+/***/ }),
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -577,7 +612,7 @@ module.exports = warning;
 if (process.env.NODE_ENV !== 'production') {
   var invariant = __webpack_require__(4);
   var warning = __webpack_require__(6);
-  var ReactPropTypesSecret = __webpack_require__(8);
+  var ReactPropTypesSecret = __webpack_require__(9);
   var loggedTypeFailures = {};
 }
 
@@ -625,10 +660,10 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
 
 module.exports = checkPropTypes;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -647,7 +682,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports) {
 
 /*
@@ -729,7 +764,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -785,7 +820,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(37);
+var	fixUrls = __webpack_require__(38);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -1101,7 +1136,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1140,7 +1175,7 @@ var ExecutionEnvironment = {
 module.exports = ExecutionEnvironment;
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1155,7 +1190,7 @@ module.exports = ExecutionEnvironment;
  * @typechecks
  */
 
-var emptyFunction = __webpack_require__(1);
+var emptyFunction = __webpack_require__(2);
 
 /**
  * Upstream version of event listener. Does not take into account specific
@@ -1218,10 +1253,10 @@ var EventListener = {
 };
 
 module.exports = EventListener;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1263,7 +1298,7 @@ function getActiveElement(doc) /*?DOMElement*/{
 module.exports = getActiveElement;
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1334,7 +1369,7 @@ function shallowEqual(objA, objB) {
 module.exports = shallowEqual;
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1349,7 +1384,7 @@ module.exports = shallowEqual;
  * 
  */
 
-var isTextNode = __webpack_require__(22);
+var isTextNode = __webpack_require__(23);
 
 /*eslint-disable no-bitwise */
 
@@ -1377,7 +1412,7 @@ function containsNode(outerNode, innerNode) {
 module.exports = containsNode;
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1407,25 +1442,25 @@ function focusNode(node) {
 module.exports = focusNode;
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _react = __webpack_require__(2);
+var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(20);
+var _reactDom = __webpack_require__(21);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _contenido = __webpack_require__(29);
+var _contenido = __webpack_require__(30);
 
 var _contenido2 = _interopRequireDefault(_contenido);
 
-var _api = __webpack_require__(42);
+var _api = __webpack_require__(47);
 
 var _api2 = _interopRequireDefault(_api);
 
@@ -1442,7 +1477,7 @@ _reactDom2.default.render(_react2.default.createElement(_contenido2.default, {
 }), $app);
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1454,7 +1489,7 @@ _reactDom2.default.render(_react2.default.createElement(_contenido2.default, {
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var m=__webpack_require__(3),n=__webpack_require__(5),p=__webpack_require__(1);
+var m=__webpack_require__(3),n=__webpack_require__(5),p=__webpack_require__(2);
 function q(a){for(var b=arguments.length-1,e="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)e+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(e+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}
 var r={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}};function t(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||r}t.prototype.isReactComponent={};t.prototype.setState=function(a,b){"object"!==typeof a&&"function"!==typeof a&&null!=a?q("85"):void 0;this.updater.enqueueSetState(this,a,b,"setState")};t.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate")};
 function u(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||r}function v(){}v.prototype=t.prototype;var w=u.prototype=new v;w.constructor=u;m(w,t.prototype);w.isPureReactComponent=!0;function x(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||r}var y=x.prototype=new v;y.constructor=x;m(y,t.prototype);y.unstable_isAsyncReactComponent=!0;y.render=function(){return this.props.children};
@@ -1471,7 +1506,7 @@ version:"16.1.1",__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED:{ReactCurren
 
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1494,8 +1529,8 @@ var _assign = __webpack_require__(3);
 var invariant = __webpack_require__(4);
 var emptyObject = __webpack_require__(5);
 var warning = __webpack_require__(6);
-var emptyFunction = __webpack_require__(1);
-var checkPropTypes = __webpack_require__(7);
+var emptyFunction = __webpack_require__(2);
+var checkPropTypes = __webpack_require__(8);
 
 // TODO: this is special because it gets imported during build.
 
@@ -2819,10 +2854,10 @@ module.exports = react;
   })();
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2860,15 +2895,15 @@ if (process.env.NODE_ENV === 'production') {
   // DCE check should happen before ReactDOM bundle executes so that
   // DevTools can report bad minification during injection.
   checkDCE();
-  module.exports = __webpack_require__(21);
+  module.exports = __webpack_require__(22);
 } else {
-  module.exports = __webpack_require__(24);
+  module.exports = __webpack_require__(25);
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2883,7 +2918,7 @@ if (process.env.NODE_ENV === 'production') {
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(2),m=__webpack_require__(11),A=__webpack_require__(3),B=__webpack_require__(1),ca=__webpack_require__(12),da=__webpack_require__(13),ea=__webpack_require__(14),ha=__webpack_require__(15),ia=__webpack_require__(16),C=__webpack_require__(5);
+var aa=__webpack_require__(0),m=__webpack_require__(12),A=__webpack_require__(3),B=__webpack_require__(2),ca=__webpack_require__(13),da=__webpack_require__(14),ea=__webpack_require__(15),ha=__webpack_require__(16),ia=__webpack_require__(17),C=__webpack_require__(5);
 function D(a){for(var b=arguments.length-1,c="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)c+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(c+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}aa?void 0:D("227");
 var la={children:!0,dangerouslySetInnerHTML:!0,defaultValue:!0,defaultChecked:!0,innerHTML:!0,suppressContentEditableWarning:!0,suppressHydrationWarning:!0,style:!0};function qa(a,b){return(a&b)===b}
 var ra={MUST_USE_PROPERTY:1,HAS_BOOLEAN_VALUE:4,HAS_NUMERIC_VALUE:8,HAS_POSITIVE_NUMERIC_VALUE:24,HAS_OVERLOADED_BOOLEAN_VALUE:32,HAS_STRING_BOOLEAN_VALUE:64,injectDOMPropertyConfig:function(a){var b=ra,c=a.Properties||{},d=a.DOMAttributeNamespaces||{},e=a.DOMAttributeNames||{};a=a.DOMMutationMethods||{};for(var f in c){sa.hasOwnProperty(f)?D("48",f):void 0;var g=f.toLowerCase(),k=c[f];g={attributeName:g,attributeNamespace:null,propertyName:f,mutationMethod:null,mustUseProperty:qa(k,b.MUST_USE_PROPERTY),
@@ -3102,7 +3137,7 @@ Z.injectIntoDevTools({findFiberByHostInstance:qb,bundleType:0,version:"16.1.1",r
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3117,7 +3152,7 @@ Z.injectIntoDevTools({findFiberByHostInstance:qb,bundleType:0,version:"16.1.1",r
  * @typechecks
  */
 
-var isNode = __webpack_require__(23);
+var isNode = __webpack_require__(24);
 
 /**
  * @param {*} object The object to check.
@@ -3130,7 +3165,7 @@ function isTextNode(object) {
 module.exports = isTextNode;
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3158,7 +3193,7 @@ function isNode(object) {
 module.exports = isNode;
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3177,21 +3212,21 @@ if (process.env.NODE_ENV !== "production") {
   (function() {
 'use strict';
 
-var React = __webpack_require__(2);
+var React = __webpack_require__(0);
 var invariant = __webpack_require__(4);
 var warning = __webpack_require__(6);
-var ExecutionEnvironment = __webpack_require__(11);
+var ExecutionEnvironment = __webpack_require__(12);
 var _assign = __webpack_require__(3);
-var emptyFunction$1 = __webpack_require__(1);
-var EventListener = __webpack_require__(12);
-var getActiveElement = __webpack_require__(13);
-var shallowEqual = __webpack_require__(14);
-var containsNode = __webpack_require__(15);
-var focusNode = __webpack_require__(16);
+var emptyFunction$1 = __webpack_require__(2);
+var EventListener = __webpack_require__(13);
+var getActiveElement = __webpack_require__(14);
+var shallowEqual = __webpack_require__(15);
+var containsNode = __webpack_require__(16);
+var focusNode = __webpack_require__(17);
 var emptyObject = __webpack_require__(5);
-var checkPropTypes = __webpack_require__(7);
-var hyphenateStyleName = __webpack_require__(25);
-var camelizeStyleName = __webpack_require__(27);
+var checkPropTypes = __webpack_require__(8);
+var hyphenateStyleName = __webpack_require__(26);
+var camelizeStyleName = __webpack_require__(28);
 
 /**
  * WARNING: DO NOT manually require this module.
@@ -18563,10 +18598,10 @@ module.exports = reactDom;
   })();
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18581,7 +18616,7 @@ module.exports = reactDom;
 
 
 
-var hyphenate = __webpack_require__(26);
+var hyphenate = __webpack_require__(27);
 
 var msPattern = /^ms-/;
 
@@ -18608,7 +18643,7 @@ function hyphenateStyleName(string) {
 module.exports = hyphenateStyleName;
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18644,7 +18679,7 @@ function hyphenate(string) {
 module.exports = hyphenate;
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18659,7 +18694,7 @@ module.exports = hyphenate;
 
 
 
-var camelize = __webpack_require__(28);
+var camelize = __webpack_require__(29);
 
 var msPattern = /^-ms-/;
 
@@ -18687,7 +18722,7 @@ function camelizeStyleName(string) {
 module.exports = camelizeStyleName;
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18722,7 +18757,7 @@ function camelize(string) {
 module.exports = camelize;
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18734,15 +18769,15 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(2);
+var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _playlist = __webpack_require__(30);
+var _playlist = __webpack_require__(31);
 
 var _playlist2 = _interopRequireDefault(_playlist);
 
-__webpack_require__(40);
+__webpack_require__(45);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -18785,7 +18820,7 @@ var Contenido = function (_Component) {
 exports.default = Contenido;
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18795,15 +18830,31 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
-var _react = __webpack_require__(2);
+var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _media = __webpack_require__(31);
+var _media = __webpack_require__(32);
 
 var _media2 = _interopRequireDefault(_media);
 
-__webpack_require__(38);
+var _play = __webpack_require__(39);
+
+var _play2 = _interopRequireDefault(_play);
+
+var _pause = __webpack_require__(40);
+
+var _pause2 = _interopRequireDefault(_pause);
+
+var _volume = __webpack_require__(41);
+
+var _volume2 = _interopRequireDefault(_volume);
+
+var _fullScreen = __webpack_require__(42);
+
+var _fullScreen2 = _interopRequireDefault(_fullScreen);
+
+__webpack_require__(43);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -18815,6 +18866,10 @@ function Playlist(props) {
 	return _react2.default.createElement(
 		'div',
 		{ className: 'Playlist' },
+		_react2.default.createElement(_play2.default, { color: 'darkred', size: 50 }),
+		_react2.default.createElement(_pause2.default, { color: 'darkgreen', size: 50 }),
+		_react2.default.createElement(_volume2.default, { color: 'darkblue', size: 50 }),
+		_react2.default.createElement(_fullScreen2.default, { color: 'gold', size: 50 }),
 		_react2.default.createElement(
 			'h3',
 			{ className: 'Playlist-descripcion' },
@@ -18843,7 +18898,7 @@ function Playlist(props) {
 exports.default = Playlist;
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18855,15 +18910,15 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(2);
+var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(32);
+var _propTypes = __webpack_require__(33);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-__webpack_require__(35);
+__webpack_require__(36);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -18951,7 +19006,7 @@ Media.propTypes = {
 exports.default = Media;
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process) {/**
@@ -18976,17 +19031,17 @@ if (process.env.NODE_ENV !== 'production') {
   // By explicitly using `prop-types` you are opting into new development behavior.
   // http://fb.me/prop-types-in-prod
   var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(33)(isValidElement, throwOnDirectAccess);
+  module.exports = __webpack_require__(34)(isValidElement, throwOnDirectAccess);
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(34)();
+  module.exports = __webpack_require__(35)();
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18999,13 +19054,13 @@ if (process.env.NODE_ENV !== 'production') {
 
 
 
-var emptyFunction = __webpack_require__(1);
+var emptyFunction = __webpack_require__(2);
 var invariant = __webpack_require__(4);
 var warning = __webpack_require__(6);
 var assign = __webpack_require__(3);
 
-var ReactPropTypesSecret = __webpack_require__(8);
-var checkPropTypes = __webpack_require__(7);
+var ReactPropTypesSecret = __webpack_require__(9);
+var checkPropTypes = __webpack_require__(8);
 
 module.exports = function(isValidElement, throwOnDirectAccess) {
   /* global Symbol */
@@ -19533,10 +19588,10 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
   return ReactPropTypes;
 };
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19549,9 +19604,9 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 
 
 
-var emptyFunction = __webpack_require__(1);
+var emptyFunction = __webpack_require__(2);
 var invariant = __webpack_require__(4);
-var ReactPropTypesSecret = __webpack_require__(8);
+var ReactPropTypesSecret = __webpack_require__(9);
 
 module.exports = function() {
   function shim(props, propName, componentName, location, propFullName, secret) {
@@ -19601,13 +19656,13 @@ module.exports = function() {
 
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(36);
+var content = __webpack_require__(37);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -19615,7 +19670,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(10)(content, options);
+var update = __webpack_require__(11)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -19632,10 +19687,10 @@ if(false) {
 }
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(9)(undefined);
+exports = module.exports = __webpack_require__(10)(undefined);
 // imports
 
 
@@ -19646,7 +19701,7 @@ exports.push([module.i, ".Media {\n  position: relative;\n  cursor: pointer;\n  
 
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports) {
 
 
@@ -19741,13 +19796,145 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 38 */
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _icon = __webpack_require__(7);
+
+var _icon2 = _interopRequireDefault(_icon);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// --- componente presentacional o tonto o funcional
+function Play(props) {
+	return _react2.default.createElement(
+		_icon2.default,
+		props,
+		_react2.default.createElement('path', { d: 'M6 4l20 12-20 12z' })
+	);
+}
+
+exports.default = Play;
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _icon = __webpack_require__(7);
+
+var _icon2 = _interopRequireDefault(_icon);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// --- componente presentacional o tonto o funcional
+function Pause(props) {
+	return _react2.default.createElement(
+		_icon2.default,
+		props,
+		_react2.default.createElement('path', { d: 'M4 4h10v24h-10zM18 4h10v24h-10z' })
+	);
+}
+
+exports.default = Pause;
+
+/***/ }),
+/* 41 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _icon = __webpack_require__(7);
+
+var _icon2 = _interopRequireDefault(_icon);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// --- componente presentacional o tonto o funcional
+function Volume(props) {
+	return _react2.default.createElement(
+		_icon2.default,
+		props,
+		_react2.default.createElement('path', { d: 'M27.814 28.814c-0.384 0-0.768-0.146-1.061-0.439-0.586-0.586-0.586-1.535 0-2.121 2.739-2.739 4.247-6.38 4.247-10.253s-1.508-7.514-4.247-10.253c-0.586-0.586-0.586-1.536 0-2.121s1.536-0.586 2.121 0c3.305 3.305 5.126 7.7 5.126 12.374s-1.82 9.069-5.126 12.374c-0.293 0.293-0.677 0.439-1.061 0.439zM22.485 25.985c-0.384 0-0.768-0.146-1.061-0.439-0.586-0.586-0.586-1.535 0-2.121 4.094-4.094 4.094-10.755 0-14.849-0.586-0.586-0.586-1.536 0-2.121s1.536-0.586 2.121 0c2.55 2.55 3.954 5.94 3.954 9.546s-1.404 6.996-3.954 9.546c-0.293 0.293-0.677 0.439-1.061 0.439v0zM17.157 23.157c-0.384 0-0.768-0.146-1.061-0.439-0.586-0.586-0.586-1.535 0-2.121 2.534-2.534 2.534-6.658 0-9.192-0.586-0.586-0.586-1.536 0-2.121s1.535-0.586 2.121 0c3.704 3.704 3.704 9.731 0 13.435-0.293 0.293-0.677 0.439-1.061 0.439z' }),
+		_react2.default.createElement('path', { d: 'M13 30c-0.26 0-0.516-0.102-0.707-0.293l-7.707-7.707h-3.586c-0.552 0-1-0.448-1-1v-10c0-0.552 0.448-1 1-1h3.586l7.707-7.707c0.286-0.286 0.716-0.372 1.090-0.217s0.617 0.519 0.617 0.924v26c0 0.404-0.244 0.769-0.617 0.924-0.124 0.051-0.254 0.076-0.383 0.076z' })
+	);
+}
+
+exports.default = Volume;
+
+/***/ }),
+/* 42 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _icon = __webpack_require__(7);
+
+var _icon2 = _interopRequireDefault(_icon);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// --- componente presentacional o tonto o funcional
+function FullScreen(props) {
+	return _react2.default.createElement(
+		_icon2.default,
+		props,
+		_react2.default.createElement('path', { d: 'M32 0h-13l5 5-6 6 3 3 6-6 5 5z' }),
+		_react2.default.createElement('path', { d: 'M32 32v-13l-5 5-6-6-3 3 6 6-5 5z' }),
+		_react2.default.createElement('path', { d: 'M0 32h13l-5-5 6-6-3-3-6 6-5-5z' }),
+		_react2.default.createElement('path', { d: 'M0 0v13l5-5 6 6 3-3-6-6 5-5z' })
+	);
+}
+
+exports.default = FullScreen;
+
+/***/ }),
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(39);
+var content = __webpack_require__(44);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -19755,7 +19942,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(10)(content, options);
+var update = __webpack_require__(11)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -19772,10 +19959,10 @@ if(false) {
 }
 
 /***/ }),
-/* 39 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(9)(undefined);
+exports = module.exports = __webpack_require__(10)(undefined);
 // imports
 
 
@@ -19786,13 +19973,13 @@ exports.push([module.i, ".Playlist {\n  width: 100%;\n  position: relative;\n  h
 
 
 /***/ }),
-/* 40 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(41);
+var content = __webpack_require__(46);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -19800,7 +19987,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(10)(content, options);
+var update = __webpack_require__(11)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -19817,10 +20004,10 @@ if(false) {
 }
 
 /***/ }),
-/* 41 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(9)(undefined);
+exports = module.exports = __webpack_require__(10)(undefined);
 // imports
 
 
@@ -19831,7 +20018,7 @@ exports.push([module.i, "", ""]);
 
 
 /***/ }),
-/* 42 */
+/* 47 */
 /***/ (function(module, exports) {
 
 module.exports = {"categories":[{"id":1,"description":"Lo mejor de la semana","title":"Destacados","playlist":[{"title":"¿Qué es responsive Design?","author":"LeonidasEsteban","type":"video","cover":"./images/covers/responsive.jpg","src":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4","id":1},{"title":"Cómo optimzar la carga de un website","author":"LeonidasEsteban","type":"video","cover":"./images/covers/optimizar.jpg","src":"http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4","id":2},{"title":"Qué es Bitcoin","author":"Yograterol","type":"video","cover":"./images/covers/bitcoin.jpg","src":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4","id":3},{"title":"Que pasó con HTML5","author":"Freddier","type":"video","cover":"./images/covers/html5.jpg","src":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4","id":4},{"title":"Lo mejor de Mejorando.la","author":"Cvander","type":"video","cover":"./images/covers/mejorandola.jpg","src":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4","id":5}]},{"id":2,"description":"Lo mejor para concentrarte","title":"Para programar","playlist":[{"title":"One more time","author":"Daft Punk","type":"video","cover":"./images/covers/one-more-time.jpg","src":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4","id":1},{"title":"Midnight City","author":"M83","type":"video","cover":"./images/covers/midnight.jpg","src":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4","id":5},{"title":"Solar Sailer","author":"Daft Punk","type":"video","cover":"./images/covers/solar-sailer.jpg","src":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4","id":2},{"title":"The social network","author":"The social network","type":"video","cover":"./images/covers/social.jpg","src":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4","id":4},{"title":"No vaya a ser","author":"Pablo Alboran","type":"video","cover":"./images/covers/no-vaya-a-ser.jpg","src":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4","id":3}]},{"id":3,"description":"Si no te queda de otra","title":"Regueton","playlist":[{"title":"Despacito","author":"Luis Fonsi","type":"video","cover":"./images/covers/despacito.jpg","src":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4","id":1},{"title":"Echame la culpa","author":"Luis fonsi","type":"video","cover":"./images/covers/echame-la-culpa.jpg","src":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4","id":3},{"title":"Mi Gente","author":"J Bavil","type":"video","cover":"./images/covers/mi-gente.jpg","src":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4","id":2},{"title":"Felices los 4","author":"Maluma","type":"video","cover":"./images/covers/felices.jpg","src":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4","id":4},{"title":"Me Rehúso","author":"Danny Ocean","type":"video","cover":"./images/covers/rehuso.jpg","src":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4","id":5}]}]}
