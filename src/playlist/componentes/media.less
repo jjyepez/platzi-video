@@ -1,0 +1,45 @@
+.Media {
+  position: relative;
+  cursor: pointer;
+  margin-right: 15px;
+  display: inline-block;
+  width: 260px;
+  min-height: 225px;
+  vertical-align: top;
+}
+.Media:hover .Media-cover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.Media-cover {
+  transition: .3s;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  height: 160px;
+}
+.Media-image {
+  object-fit: cover;
+}
+.Media-title {
+  font-family: monospace, 'sans-serif';
+  margin: 5px 12px 0 12px;
+  color: #44546b;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: .8rem;
+  max-width: 90%;
+}
+.Media-author {
+  font-family: monospace, 'sans-serif';
+  font-size: .8rem;
+  margin: 5px 12px 12px 12px;
+  color: #999;
+}
+.tarjeta {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  border-radius: 5px;
+  transition: box-shadow ease 0.25s;
+}
+.tarjeta:hover {
+  box-shadow: 0 5px 50px rgba(0, 0, 0, 0.25);
+}

@@ -1,6 +1,8 @@
 import React 	from 'react'
 import ReactDOM from 'react-dom'
-import Media from './src/playlisyt/componentes/media.js'
+// import Media 	from './src/playlisyt/componentes/media.js'
+import Contenido	from './src/playlist/componentes/contenido'
+import data 	from './src/data/api.json'
 
 const $app = document.getElementById( 'app' )
 
@@ -8,10 +10,7 @@ const $app = document.getElementById( 'app' )
 // 	  el elemento que se va a renderizar podría der o un bloque de codigo JSX o un componente de React
 //const html = <h1>Jai pipol!</h1>
 ReactDOM.render(
-	<Media 
-		image  = "./img/covers/responsive.jpg"
-		title  = "¿Qué es responsive design?"
-		author = "@jjyepez"
-		type   = "video"
+	<Contenido 
+		data = {data}
 	/>
-	, $app )
+, $app)

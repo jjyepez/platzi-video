@@ -4,7 +4,7 @@ import './media.css'
 
 class Media extends Component {
 	state = {
-		author: 'Leonidas Esteban'
+		// author: 'Leonidas Esteban'
 	}
 	// constructor(props){
 		// super(props)
@@ -33,7 +33,7 @@ class Media extends Component {
 						{this.props.title}
 					</h3>
 					<p  className = "Media-author">
-						{this.state.author}
+						{this.props.author}
 					</p>
 				</div>
 			</div>
@@ -43,10 +43,10 @@ class Media extends Component {
 
 // -- validar los tipos de datos recibidos en las props
 Media.propTypes = {
-	image: PropTypes.string,
-	title: PropTypes.string.isRequired,
+	image : PropTypes.string,
+	title : PropTypes.string.isRequired,
 	author: PropTypes.string,
-	type: PropTypes.oneOf(['video','audio']) // sólo válidos los valores de la lista
+	type  : PropTypes.oneOf(['video','audio']) // sólo válidos los valores de la lista
 }
 
 export default Media
