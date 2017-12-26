@@ -3,26 +3,34 @@ import PropTypes from 'prop-types'
 import './media.css'
 
 class Media extends Component {
+	constructor(props){
+		super(props)
+		this.state = {
+			author: props.author
+		}
+	}
 	handleClick = (e) => {
+		this.setState({
+			author: "@mocape"
+		})
 		console.log(this.props.image)
 	}
 	render() {
-		const { image, title, author } = this.props;
 		return (
 			<div className = "Media tarjeta" onClick={this.handleClick}>
 				<div className = "Media-cover">
 					<img
 						className = "Media-image"
-						src       = {image}
+						src       = {this.props.image}
 						alt       = ""
 						width     = {260}
 						height    = {160}
 					/>
 					<h3 className = "Media-title">
-						{title}
+						{this.props.title}
 					</h3>
 					<p  className = "Media-author">
-						{author}
+						{this.state.author}
 					</p>
 				</div>
 			</div>

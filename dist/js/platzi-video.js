@@ -18299,35 +18299,27 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Media = function (_Component) {
 	_inherits(Media, _Component);
 
-	function Media() {
-		var _ref;
-
-		var _temp, _this, _ret;
-
+	function Media(props) {
 		_classCallCheck(this, Media);
 
-		for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-			args[_key] = arguments[_key];
-		}
+		var _this = _possibleConstructorReturn(this, (Media.__proto__ || Object.getPrototypeOf(Media)).call(this, props));
 
-		return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Media.__proto__ || Object.getPrototypeOf(Media)).call.apply(_ref, [this].concat(args))), _this), _this.handleClick = function (e) {
+		_this.handleClick = function (e) {
+			_this.setState({
+				author: "@mocape"
+			});
 			console.log(_this.props.image);
-		}, _temp), _possibleConstructorReturn(_this, _ret);
-	}
-	/*constructor(props) {
- 	super(props)
- 	this.handleClick = this.handleClick.bind(this)
- }*/
+		};
 
+		_this.state = {
+			author: props.author
+		};
+		return _this;
+	}
 
 	_createClass(Media, [{
 		key: 'render',
 		value: function render() {
-			var _props = this.props,
-			    image = _props.image,
-			    title = _props.title,
-			    author = _props.author;
-
 			return _react2.default.createElement(
 				'div',
 				{ className: 'Media tarjeta', onClick: this.handleClick },
@@ -18336,7 +18328,7 @@ var Media = function (_Component) {
 					{ className: 'Media-cover' },
 					_react2.default.createElement('img', {
 						className: 'Media-image',
-						src: image,
+						src: this.props.image,
 						alt: '',
 						width: 260,
 						height: 160
@@ -18344,12 +18336,12 @@ var Media = function (_Component) {
 					_react2.default.createElement(
 						'h3',
 						{ className: 'Media-title' },
-						title
+						this.props.title
 					),
 					_react2.default.createElement(
 						'p',
 						{ className: 'Media-author' },
-						author
+						this.state.author
 					)
 				)
 			);
