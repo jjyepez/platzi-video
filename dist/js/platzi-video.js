@@ -18299,22 +18299,31 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Media = function (_Component) {
 	_inherits(Media, _Component);
 
-	function Media(props) {
+	function Media() {
+		var _ref;
+
+		var _temp, _this, _ret;
+
 		_classCallCheck(this, Media);
 
-		var _this = _possibleConstructorReturn(this, (Media.__proto__ || Object.getPrototypeOf(Media)).call(this, props));
+		for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+			args[_key] = arguments[_key];
+		}
 
-		_this.handleClick = function (e) {
+		return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Media.__proto__ || Object.getPrototypeOf(Media)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+			author: 'Leonidas Esteban'
+			// constructor(props){
+			// super(props)
+			// this.state = {
+			// author: props.author
+			// }
+			// }
+		}, _this.handleClick = function (e) {
 			_this.setState({
 				author: "@mocape"
 			});
 			console.log(_this.props.image);
-		};
-
-		_this.state = {
-			author: props.author
-		};
-		return _this;
+		}, _temp), _possibleConstructorReturn(_this, _ret);
 	}
 
 	_createClass(Media, [{
