@@ -18299,13 +18299,21 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Media = function (_Component) {
 	_inherits(Media, _Component);
 
-	function Media() {
+	function Media(props) {
 		_classCallCheck(this, Media);
 
-		return _possibleConstructorReturn(this, (Media.__proto__ || Object.getPrototypeOf(Media)).apply(this, arguments));
+		var _this = _possibleConstructorReturn(this, (Media.__proto__ || Object.getPrototypeOf(Media)).call(this, props));
+
+		_this.handleClick = _this.handleClick.bind(_this);
+		return _this;
 	}
 
 	_createClass(Media, [{
+		key: 'handleClick',
+		value: function handleClick(e) {
+			console.log(this.props.title);
+		}
+	}, {
 		key: 'render',
 		value: function render() {
 			var _props = this.props,
@@ -18313,10 +18321,9 @@ var Media = function (_Component) {
 			    title = _props.title,
 			    author = _props.author;
 
-
 			return _react2.default.createElement(
 				'div',
-				{ className: 'Media tarjeta' },
+				{ className: 'Media tarjeta', onClick: this.handleClick },
 				_react2.default.createElement(
 					'div',
 					{ className: 'Media-cover' },
