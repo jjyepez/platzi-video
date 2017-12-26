@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import './media.css'
 
 class Media extends Component {
@@ -26,6 +27,14 @@ class Media extends Component {
 			</div>
 		)
 	}
+}
+
+// -- validar los tipos de datos recibidos en las props
+Media.propTypes = {
+	image: PropTypes.string,
+	title: PropTypes.string.isRequired,
+	author: PropTypes.string,
+	type: PropTypes.oneOf(['video','audio']) // sólo válidos los valores de la lista
 }
 
 export default Media

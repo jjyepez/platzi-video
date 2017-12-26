@@ -12,5 +12,6 @@ ReactDOM.render(
 		image  = "./img/covers/responsive.jpg"
 		title  = "¿Qué es responsive design?"
 		author = "@jjyepez"
+		type   = "video"
 	/>
 	, $app )
