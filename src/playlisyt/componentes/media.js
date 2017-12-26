@@ -1,31 +1,27 @@
-import React, { Component } from 'react';
-
+import React, { Component } from 'react'
+import './media.css'
 class Media extends Component {
 	render() {
-		const estilos = {
-			contenedor: {
-				color: 'teal',
-				fontSize: 20,
-				cursor: 'pointer',
-				width: 260,
-				border: '1px solid red'
-			}
-		}
 		return (
-			<div style={estilos.contenedor}>
-				<div>
+			<div className = "Media tarjeta">
+				<div className = "Media-cover">
 					<img
-						src="./img/covers/bitcoin.jpg"
-						alt=""
-						width={260}
-						height={160}
+						className = "Media-image"
+						src       = "./img/covers/bitcoin.jpg"
+						alt       = ""
+						width     = {260}
+						height    = {160}
 					/>
-					<h3>¿Por qué aprender react?</h3>
-					<p>Leonidas Esteban</p>
+					<h3 className = "Media-title">
+						¿Por qué aprender react?
+					</h3>
+					<p  className = "Media-author">
+						Leonidas Esteban
+					</p>
 				</div>
 			</div>
 		)
 	}
 }
-
 export default Media
+
