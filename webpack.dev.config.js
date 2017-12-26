@@ -6,7 +6,8 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js/[name].js'
+    filename: 'js/[name].js',
+    publicPath: './dist/'
   },
   devServer: {
     port: 9000
@@ -36,10 +37,10 @@ module.exports = {
           options: {
             limit: 1000000,
             fallback: 'file-loader',
-            name: 'images/[name].[hash].[ext]',
+            name: 'img/[name].[hash].[ext]',
           }
         }
-      },
+      }
     ]
   }
 }

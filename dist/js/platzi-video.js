@@ -57,7 +57,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "./dist/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 14);
@@ -959,7 +959,11 @@ var $app = document.getElementById('app');
 // -- ReactDOM.render(que voy a renderizar, donde lo hare )
 // 	  el elemento que se va a renderizar podría der o un bloque de codigo JSX o un componente de React
 //const html = <h1>Jai pipol!</h1>
-_reactDom2.default.render(_react2.default.createElement(_media2.default, null), $app);
+_reactDom2.default.render(_react2.default.createElement(_media2.default, {
+	image: './img/covers/responsive.jpg',
+	title: '\xBFQu\xE9 es responsive design?',
+	author: '@jjyepez'
+}), $app);
 
 /***/ }),
 /* 15 */
@@ -18299,15 +18303,21 @@ var Media = function (_Component) {
 	_createClass(Media, [{
 		key: 'render',
 		value: function render() {
+			var _props = this.props,
+			    image = _props.image,
+			    title = _props.title,
+			    author = _props.author;
+
+
 			return _react2.default.createElement(
 				'div',
-				{ className: 'Media' },
+				{ className: 'Media tarjeta' },
 				_react2.default.createElement(
 					'div',
-					{ classList: ("Media-cover", "1", "2") },
+					{ className: 'Media-cover' },
 					_react2.default.createElement('img', {
 						className: 'Media-image',
-						src: './img/covers/bitcoin.jpg',
+						src: image,
 						alt: '',
 						width: 260,
 						height: 160
@@ -18315,12 +18325,12 @@ var Media = function (_Component) {
 					_react2.default.createElement(
 						'h3',
 						{ className: 'Media-title' },
-						'\xBFPor qu\xE9 aprender react?'
+						title
 					),
 					_react2.default.createElement(
 						'p',
 						{ className: 'Media-author' },
-						'Leonidas Esteban'
+						author
 					)
 				)
 			);
@@ -18372,7 +18382,7 @@ exports = module.exports = __webpack_require__(30)(undefined);
 
 
 // module
-exports.push([module.i, ".Media {\n  cursor: pointer;\n  margin-right: 15px;\n  display: inline-block;\n  width: 260px;\n  vertical-align: top;\n}\n\n.Media:hover .Media-cover {\n  box-shadow: 0 0 10px rgba(0,0,0,.3);\n}\n\n.Media-cover {\n  transition: .3s;\n  box-shadow: 0 0 5px rgba(0,0,0,.3);\n  height: 160px;\n}\n\n.Media-image {\n  object-fit: cover;\n}\n\n.Media-title {\n  margin: 5px 0 0 0;\n  color: #44546b;\n  white-space: normal;\n}\n\n.Media-author {\n  font-size: 12px;\n  margin: 5px 0 0 0;\n}\n", ""]);
+exports.push([module.i, ".Media {\n  color: red;\n  cursor: pointer;\n  margin-right: 15px;\n  display: inline-block;\n  width: 260px;\n  min-height: 225px;\n  vertical-align: top;\n}\n.Media:hover .Media-cover {\n  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);\n}\n.Media-cover {\n  transition: .3s;\n  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);\n  height: 160px;\n}\n.Media-image {\n  object-fit: cover;\n}\n.Media-title {\n  margin: 5px 12px 0 12px;\n  color: #44546b;\n  white-space: normal;\n}\n.Media-author {\n  font-size: 12px;\n  margin: 5px 12px 12px 12px;\n}\n.tarjeta {\n  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);\n  overflow: hidden;\n  border-radius: 5px;\n}\n", ""]);
 
 // exports
 
