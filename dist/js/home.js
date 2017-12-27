@@ -18779,7 +18779,8 @@ var Home = function (_Component) {
     }
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Home.__proto__ || Object.getPrototypeOf(Home)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-      modalVisible: false
+      modalVisible: false,
+      handleError: false
     }, _this.handleOpenModal = function (e) {
       _this.setState({
         modalVisible: true
@@ -18792,8 +18793,22 @@ var Home = function (_Component) {
   }
 
   _createClass(Home, [{
+    key: 'componentDidCatch',
+    value: function componentDidCatch(error, info) {
+      this.setState({
+        handleError: true
+      });
+    }
+  }, {
     key: 'render',
     value: function render() {
+      if (this.state.handleError) {
+        return _react2.default.createElement(
+          'p',
+          null,
+          'Se ha presentado un error.'
+        );
+      }
       return _react2.default.createElement(
         _homeLayout2.default,
         null,

@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
-import HomeLayout from '../components/home-layout'
-import Categories from '../../categories/categories'
-import Related from '../components/related'
+import HomeLayout     from '../components/home-layout'
+import Categories     from '../../categories/categories'
+import Related        from '../components/related'
 import ModalContainer from '../../widgets/containers/modal-container'
-import Modal from '../../widgets/components/modal'
+import Modal          from '../../widgets/components/modal'
 
 class Home extends Component {
   state = {
-    modalVisible: false
+    modalVisible: false,
+    handleError : false,
   }
   handleOpenModal = e => {
     this.setState({
@@ -19,7 +20,15 @@ class Home extends Component {
       modalVisible: false,
     })
   }
+  componentDidCatch( error, info ){
+    this.setState({
+      handleError: true,
+    })
+  }
   render(){
+    if( this.state.handleError ){
+      return <p>Se ha presentado un error.</p>
+    }
     return (
       <HomeLayout>
 
@@ -28,7 +37,6 @@ class Home extends Component {
           categories = {this.props.data.categories}
           handleOpenModalClick = {this.handleOpenModal}
         />
-
         {
           this.state.modalVisible ?
           <ModalContainer>
