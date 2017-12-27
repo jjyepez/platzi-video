@@ -1471,7 +1471,7 @@ var _home = __webpack_require__(29);
 
 var _home2 = _interopRequireDefault(_home);
 
-var _api = __webpack_require__(59);
+var _api = __webpack_require__(63);
 
 var _api2 = _interopRequireDefault(_api);
 
@@ -18748,15 +18748,15 @@ var _categories = __webpack_require__(36);
 
 var _categories2 = _interopRequireDefault(_categories);
 
-var _modalContainer = __webpack_require__(51);
+var _modalContainer = __webpack_require__(55);
 
 var _modalContainer2 = _interopRequireDefault(_modalContainer);
 
-var _modal = __webpack_require__(52);
+var _modal = __webpack_require__(56);
 
 var _modal2 = _interopRequireDefault(_modal);
 
-var _handleError = __webpack_require__(55);
+var _handleError = __webpack_require__(59);
 
 var _handleError2 = _interopRequireDefault(_handleError);
 
@@ -18806,7 +18806,7 @@ var Home = function (_Component) {
           null,
           _react2.default.createElement(_related2.default, null),
           _react2.default.createElement(_categories2.default, {
-            categories: this.props.data,
+            categories: this.props.data.categories,
             handleOpenModalClick: this.handleOpenModal
           }),
           this.state.modalVisible && _react2.default.createElement(
@@ -19061,12 +19061,17 @@ var _category2 = _interopRequireDefault(_category);
 
 __webpack_require__(49);
 
+var _search = __webpack_require__(51);
+
+var _search2 = _interopRequireDefault(_search);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Categories(props) {
   return _react2.default.createElement(
     'div',
     { className: 'Categories' },
+    _react2.default.createElement(_search2.default, null),
     props.categories.map(function (category) {
       return _react2.default.createElement(_category2.default, _extends({}, category, {
         key: category.id,
@@ -20089,6 +20094,165 @@ exports.push([module.i, ".Categories {\n  margin-left: 300px;\n  padding-left: 1
 
 
 Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _search = __webpack_require__(52);
+
+var _search2 = _interopRequireDefault(_search);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SearchContainer = function (_Component) {
+	_inherits(SearchContainer, _Component);
+
+	function SearchContainer() {
+		var _ref;
+
+		var _temp, _this, _ret;
+
+		_classCallCheck(this, SearchContainer);
+
+		for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+			args[_key] = arguments[_key];
+		}
+
+		return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = SearchContainer.__proto__ || Object.getPrototypeOf(SearchContainer)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+			inputValue: 'Valor inicial'
+			// --- los metodos deben crearse como arrow functions .. no como funciones estandar para poder usar internamente -this-
+		}, _this.handleSubmit = function (e) {
+			e.preventDefault();
+		}, _this.setInputRef = function (element) {
+			_this.inputBusqueda = element;
+		}, _this.handleInputChange = function (e) {
+			_this.setState({
+				inputValue: e.target.value.replace(' ', '-')
+			});
+		}, _temp), _possibleConstructorReturn(_this, _ret);
+	}
+
+	_createClass(SearchContainer, [{
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(_search2.default, {
+				setRef: this.setInputRef,
+				handleSubmit: this.handleSubmit,
+				handleChange: this.handleInputChange,
+				value: this.state.inputValue
+			});
+		}
+	}]);
+
+	return SearchContainer;
+}(_react.Component);
+
+exports.default = SearchContainer;
+
+/***/ }),
+/* 52 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(53);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Search = function Search(props) {
+	return _react2.default.createElement(
+		'form',
+		{
+			className: 'Search',
+			onSubmit: props.handleSubmit
+		},
+		_react2.default.createElement('input', {
+			ref: props.setRef,
+			onChange: props.handleChange,
+			value: props.value,
+			type: 'text',
+			placeholder: 'Busca tu video favorito',
+			className: 'Search-input',
+			name: 'search'
+		})
+	);
+};
+
+exports.default = Search;
+
+/***/ }),
+/* 53 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(54);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {"hmr":true}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(4)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../node_modules/css-loader/index.js!./search.css", function() {
+			var newContent = require("!!../../../node_modules/css-loader/index.js!./search.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 54 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".Search-input {\n  margin: 1rem 0;\n  padding: .5rem 1rem;\n  border-radius: 50px;\n  border: 1px solid #ccc;\n  outline: none;\n  font-size: 1.2rem;\n  width: 400px;\n  color: #555;\n}\n.Search-input:focus {\n  background-color: #fcfcfc;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 55 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
@@ -20132,7 +20296,7 @@ var ModalContainer = function (_Component) {
 exports.default = ModalContainer;
 
 /***/ }),
-/* 52 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20146,7 +20310,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(53);
+__webpack_require__(57);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -20169,13 +20333,13 @@ function Modal(props) {
 exports.default = Modal;
 
 /***/ }),
-/* 53 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(54);
+var content = __webpack_require__(58);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -20200,7 +20364,7 @@ if(false) {
 }
 
 /***/ }),
-/* 54 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(undefined);
@@ -20214,7 +20378,7 @@ exports.push([module.i, ".Modal {\n  position: fixed;\n  z-index: 100;\n  width:
 
 
 /***/ }),
-/* 55 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20230,7 +20394,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _regularError = __webpack_require__(56);
+var _regularError = __webpack_require__(60);
 
 var _regularError2 = _interopRequireDefault(_regularError);
 
@@ -20285,7 +20449,7 @@ var HandleError = function (_Component) {
 exports.default = HandleError;
 
 /***/ }),
-/* 56 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20299,12 +20463,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(57);
+__webpack_require__(61);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function RegularError(props) {
-	console.log(props);
 	return _react2.default.createElement(
 		'div',
 		{ className: 'RegularError' },
@@ -20338,13 +20501,13 @@ function RegularError(props) {
 exports.default = RegularError;
 
 /***/ }),
-/* 57 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(58);
+var content = __webpack_require__(62);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -20369,7 +20532,7 @@ if(false) {
 }
 
 /***/ }),
-/* 58 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(undefined);
@@ -20377,13 +20540,13 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, ".RegularError {\n  width: 100%;\n  padding-top: 25%;\n  text-align: center;\n  font-family: monospace, 'sans-serif';\n  color: #999;\n}\n.RegularError-emojis {\n  opacity: .85;\n  font-size: 5rem;\n  margin: 0;\n}\n", ""]);
+exports.push([module.i, ".RegularError {\n  width: 100%;\n  margin-top: 150px;\n  text-align: center;\n  font-family: monospace, 'sans-serif';\n  color: #999;\n}\n.RegularError-emojis {\n  opacity: .85;\n  font-size: 5rem;\n  margin: 0;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 59 */
+/* 63 */
 /***/ (function(module, exports) {
 
 module.exports = {"categories":[{"id":1,"description":"Lo mejor de la semana","title":"Destacados","playlist":[{"title":"¿Qué es responsive Design?","author":"LeonidasEsteban","type":"video","cover":"./images/covers/responsive.jpg","src":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4","id":1},{"title":"Cómo optimzar la carga de un website","author":"LeonidasEsteban","type":"video","cover":"./images/covers/optimizar.jpg","src":"http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4","id":2},{"title":"Qué es Bitcoin","author":"Yograterol","type":"video","cover":"./images/covers/bitcoin.jpg","src":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4","id":3},{"title":"Que pasó con HTML5","author":"Freddier","type":"video","cover":"./images/covers/html5.jpg","src":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4","id":4},{"title":"Lo mejor de Mejorando.la","author":"Cvander","type":"video","cover":"./images/covers/mejorandola.jpg","src":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4","id":5}]},{"id":2,"description":"Lo mejor para concentrarte","title":"Para programar","playlist":[{"title":"One more time","author":"Daft Punk","type":"video","cover":"./images/covers/one-more-time.jpg","src":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4","id":1},{"title":"Midnight City","author":"M83","type":"video","cover":"./images/covers/midnight.jpg","src":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4","id":5},{"title":"Solar Sailer","author":"Daft Punk","type":"video","cover":"./images/covers/solar-sailer.jpg","src":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4","id":2},{"title":"The social network","author":"The social network","type":"video","cover":"./images/covers/social.jpg","src":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4","id":4},{"title":"No vaya a ser","author":"Pablo Alboran","type":"video","cover":"./images/covers/no-vaya-a-ser.jpg","src":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4","id":3}]},{"id":3,"description":"Si no te queda de otra","title":"Regueton","playlist":[{"title":"Despacito","author":"Luis Fonsi","type":"video","cover":"./images/covers/despacito.jpg","src":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4","id":1},{"title":"Echame la culpa","author":"Luis fonsi","type":"video","cover":"./images/covers/echame-la-culpa.jpg","src":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4","id":3},{"title":"Mi Gente","author":"J Bavil","type":"video","cover":"./images/covers/mi-gente.jpg","src":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4","id":2},{"title":"Felices los 4","author":"Maluma","type":"video","cover":"./images/covers/felices.jpg","src":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4","id":4},{"title":"Me Rehúso","author":"Danny Ocean","type":"video","cover":"./images/covers/rehuso.jpg","src":"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4","id":5}]}]}
