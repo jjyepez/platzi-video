@@ -10,6 +10,7 @@ function Categories(props){
           return (
           	<Category {...category}
           		key = {category.id}
+              handleOpenModalClick = {props.handleOpenModalClick}
           	/>
           )
         })

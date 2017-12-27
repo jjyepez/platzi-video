@@ -10,6 +10,7 @@ function Category(props){
       <h1 className = "Category-titulo">{props.title}</h1>
     	<Playlist
         playlist = {props.playlist}
+        handleOpenModalClick = {props.handleOpenModalClick}
       />
     </div>
   )

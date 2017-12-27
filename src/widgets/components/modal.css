@@ -1,0 +1,29 @@
+.Modal {
+  position: fixed;
+  z-index: 100;
+  width: 600px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -300px;
+  left: 50%;
+  top: 50%;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+.Modal-close {
+  position: absolute;
+  border-radius: 100%;
+  width: 2rem;
+  height: 2rem;
+  line-height: 1.9rem;
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: #FFF;
+  border: 1px solid #ccc;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+  cursor: pointer;
+  outline: none;
+}

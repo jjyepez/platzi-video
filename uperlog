@@ -1,0 +1,145 @@
+[33mcommit 5887d9e22ba29e16515274e4306162f057514c92[m
+Author: jjyepez <jjyepez@gmail.com>
+Date:   Wed Dec 27 07:22:42 2017 -0400
+
+    Iniciando creacion de ModalContainer - Clase 23
+
+[33mcommit 7ec28d99ef32e2ebd00637fc56144becce08a431[m
+Author: jjyepez <jjyepez@gmail.com>
+Date:   Wed Dec 27 06:28:39 2017 -0400
+
+    Agregados estilos adicionales - Clase 22
+
+[33mcommit 225a98e22a9f7bb0e4b70f32fafea825c9c88ec1[m
+Author: jjyepez <jjyepez@gmail.com>
+Date:   Wed Dec 27 06:06:44 2017 -0400
+
+    Agregada la sección Related (sin estilos) - Clase 22
+
+[33mcommit 0f1d4fdca0745c7531a3a76113992abdd5dde4db[m
+Merge: 4b94f5d 6ad7d43
+Author: jjyepez <jjyepez@gmail.com>
+Date:   Wed Dec 27 05:37:15 2017 -0400
+
+    'Soft reset para agregar components.md'
+
+[33mcommit 4b94f5de37ac992a7f4a0971cdff54e30cd651d9[m
+Author: jjyepez <jjyepez@gmail.com>
+Date:   Wed Dec 27 05:32:57 2017 -0400
+
+    Creada la estructura base del sitio - Clase 21
+
+[33mcommit 6ad7d438cedaa4e6182947e0a63b64d37450a030[m
+Author: jjyepez <jjyepez@gmail.com>
+Date:   Wed Dec 27 05:27:13 2017 -0400
+
+    Creada la estructura base del sitio - Clase 21
+
+[33mcommit ba48d25852314475351d47a0ca01e39516e95c8d[m
+Author: jjyepez <jjyepez@gmail.com>
+Date:   Wed Dec 27 03:07:02 2017 -0400
+
+    Avances menores
+
+[33mcommit a1ffd56de6b72f14743fe90b9be5e5e3794080f9[m
+Author: jjyepez <jjyepez@gmail.com>
+Date:   Tue Dec 26 14:09:53 2017 -0400
+
+    Creados componentes de Iconos - Clase 19
+
+[33mcommit f1cdffeb6bf32697500c31ea39d7294b103c1b1f[m
+Author: jjyepez <jjyepez@gmail.com>
+Date:   Tue Dec 26 12:36:33 2017 -0400
+
+    Cambiando componentes estandar a funcionales y puros - clase 17
+
+[33mcommit 8089c0a32fdb79b20f61c3ce567d44e4073a6df7[m
+Author: jjyepez <jjyepez@gmail.com>
+Date:   Tue Dec 26 12:17:29 2017 -0400
+
+    Agregados JSON y componentes Contenido + Playlist - clase 16
+
+[33mcommit 91ec4a86da79f0f759eff42403893b02979de491[m
+Author: jjyepez <jjyepez@gmail.com>
+Date:   Tue Dec 26 08:19:32 2017 -0400
+
+    Estado con ES7, sin constructor
+
+[33mcommit db1b878b7f9d6b7411ebf730263e1e85323ee2ce[m
+Author: jjyepez <jjyepez@gmail.com>
+Date:   Tue Dec 26 08:16:31 2017 -0400
+
+    Manejar estado con constructor
+
+[33mcommit d4a6634d0ff683b0b3a27df4698e3de2c3e83c50[m
+Author: jjyepez <jjyepez@gmail.com>
+Date:   Tue Dec 26 07:26:28 2017 -0400
+
+    Ajustes menores
+
+[33mcommit 002cfd94222279c08183c2c4be4c2316acf58756[m
+Author: jjyepez <jjyepez@gmail.com>
+Date:   Tue Dec 26 07:23:35 2017 -0400
+
+    handleClick mejorado con ES7 - Babel:stage-2
+
+[33mcommit b06f81858bb465b110f7dde0d9a14b5d11ad98d4[m
+Author: jjyepez <jjyepez@gmail.com>
+Date:   Tue Dec 26 07:19:57 2017 -0400
+
+    Agregado evento click en componente
+
+[33mcommit 7a309b7b6745d15ec84a0f54c187b8207c7bd03e[m
+Author: jjyepez <jjyepez@gmail.com>
+Date:   Tue Dec 26 07:05:06 2017 -0400
+
+    Agregados los PropTypes - clase 12
+
+[33mcommit ef64903a198c025099b7b93a4d68837c66a8ebf5[m
+Author: jjyepez <jjyepez@gmail.com>
+Date:   Tue Dec 26 06:38:27 2017 -0400
+
+    Agregadas las props al componente
+
+[33mcommit 5d4376fb75e639300e37bb00ff48f058e75390cf[m
+Author: jjyepez <jjyepez@gmail.com>
+Date:   Tue Dec 26 05:20:02 2017 -0400
+
+    Completado el componente base Media, con import del css
+
+[33mcommit 50f5e26a899f9494e69220d798b5624e3ca8a1f1[m
+Author: jjyepez <jjyepez@gmail.com>
+Date:   Tue Dec 26 04:31:29 2017 -0400
+
+    Avances clase 10, con imágenes y estilos
+
+[33mcommit bc957b6785e64b2c4ffc26fdd21600b15dadad20[m
+Author: jjyepez <jjyepez@gmail.com>
+Date:   Tue Dec 26 03:52:53 2017 -0400
+
+    Clase 9
+
+[33mcommit 0e58e8c95c5f0a20acdb2055fda17d63e4a9664a[m
+Author: jjyepez <jjyepez@gmail.com>
+Date:   Tue Dec 26 03:09:35 2017 -0400
+
+    Clase 8
+
+[33mcommit d43a08d79bbd79bbde21f014f9b2afc127574ff8[m
+Merge: da5cdee 72073a8
+Author: jjyepez <jjyepez@gmail.com>
+Date:   Tue Dec 26 02:06:50 2017 -0400
+
+    Merge branch 'master' of github.com:jjyepez/platzi-video
+
+[33mcommit da5cdeec2e7a5a9b511626df904e8f2bc47560ef[m
+Author: jjyepez <jjyepez@gmail.com>
+Date:   Tue Dec 26 02:06:08 2017 -0400
+
+    Commit inicial - Estructura base de React creada
+
+[33mcommit 72073a8177898e6faa3d72a2cb3fc82f9ee521a6[m
+Author: Julio J <jjyepez@gmail.com>
+Date:   Tue Dec 26 02:02:46 2017 -0400
+
+    Initial commit

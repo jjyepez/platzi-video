@@ -13,6 +13,7 @@ function Playlist(props) {
                   image  = {item.cover} 
                   type   = {item.type}
                   key    = {item.id}
+                  handleClick = {props.handleOpenModalClick}
                 />
           })
         }
