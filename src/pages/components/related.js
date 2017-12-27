@@ -5,7 +5,7 @@ import './related.css'
 function Related(props) {
   return (
     <div className = "Related">
-      <img src={logoBase64} width={260} />
+      <img className = "logo" src={logoBase64} width={260} />
     </div>
   )
 }
