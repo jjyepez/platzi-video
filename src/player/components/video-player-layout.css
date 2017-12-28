@@ -1,6 +1,9 @@
 .VideoPlayer {
-  width: 480px;
-  height: 320px;
+  width: 400px;
+  height: 280px;
   background-color: #000;
-  position: relative;
+  position: absolute;
+  left:10%;
+  top: 5%;
+  z-index: 100;
 }

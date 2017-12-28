@@ -3,7 +3,7 @@ import Search from '../components/search'
 
 class SearchContainer extends Component {
 	state = {
-		inputValue: 'Valor inicial'
+		inputValue: 'Luis Fonsi'
 	}
 	// --- los metodos deben crearse como arrow functions .. no como funciones estandar para poder usar internamente -this-
 	handleSubmit = e => {
@@ -20,7 +20,7 @@ class SearchContainer extends Component {
 	render() {
 		return (
 				<Search
-					setRef       = {this.setInputRef} 
+					setRef       = {this.setInputRef}
 					handleSubmit = {this.handleSubmit}
 					handleChange = {this.handleInputChange}
 					value 			 = {this.state.inputValue}

@@ -1,9 +1,6 @@
 .PlayPause {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   width: inherit;
-  z-index:100;
+  margin: 5px;
 }
 .PlayPause button {
   background-color: transparent;

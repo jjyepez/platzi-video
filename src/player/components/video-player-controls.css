@@ -1,0 +1,10 @@
+.VideoPlayerControls {
+  position: absolute;
+  bottom: 0;
+  width: inherit;
+  background-color: rgba(0,0,0,.5);
+  height: 35px;
+  vertical-align: middle;
+  z-index: 100;
+  display: flex;
+}
