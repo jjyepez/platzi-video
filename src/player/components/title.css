@@ -5,6 +5,7 @@
   top: 0;
   left: 0;
   width: inherit;
+  z-index: 100;
 }
 .Title h2 {
   width: 95%;

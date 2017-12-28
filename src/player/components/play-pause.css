@@ -1,0 +1,17 @@
+.PlayPause {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: inherit;
+  z-index:100;
+}
+.PlayPause button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  opacity: .5;
+}
+.PlayPause button:hover {
+  opacity: 1;
+}
