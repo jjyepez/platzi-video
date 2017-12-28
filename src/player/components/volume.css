@@ -1,0 +1,20 @@
+.Volume {
+  position: relative;
+}
+.Volume svg {
+  width: 30px;
+}
+.Volume button {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  opacity: .5;
+}
+.Volume:hover button {
+  opacity: 1;
+}
+.Volume:hover .VolumeSlider {
+  display: block;
+}

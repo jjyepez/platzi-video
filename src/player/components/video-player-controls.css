@@ -6,5 +6,12 @@
   height: 35px;
   vertical-align: middle;
   z-index: 100;
-  display: flex;
+  display: table;
+}
+
+.VideoPlayerControls > div{
+  display: table-cell;
+  /*box-shadow: 0 0 5px red inset;*/
+  vertical-align: middle;
+  text-align: center;
 }

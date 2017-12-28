@@ -1,8 +1,7 @@
 .Timer {
   font-family: monospace, 'sans-serif';
+  font-size: .75rem;
   color: #FFF;
   vertical-align: middle;
-  position: absolute;
-  right: 1rem;
   line-height: 35px;
 }
