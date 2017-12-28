@@ -6,16 +6,20 @@ import PlayPause from '../components/play-pause'
 
 class VideoPlayerContainer extends Component {
   state = {
-    playing: true
+    playing: false
   }
   togglePlay = e => {
     //if( this.state.playing ) this.video.pause(); else this.video.play()
-    this.setState({
-      playing: ! this.state.playing // --- toggling
-    })
+    this.setState( prevState => ({ // --- se puede pasar una funcion que recibira el state anterior por defecto
+        playing: ! prevState.playing // --- toggling
+      })
+    )
   }
-  setVideoRef( element ){
-    //this.video = element
+  componentDidMount(){
+    // --- ya se renderizó el componente
+    this.setState({
+      playing: ! this.props.autoplay
+    })
   }
   render(){
     return(
@@ -28,8 +32,8 @@ class VideoPlayerContainer extends Component {
           playing     = {this.state.playing}
         />
         <Video
-          //ref      = {this.setVideoRef}
-          autoplay = {this.state.playing}
+          autoplay = {this.props.autoplay}
+          playing  = {this.state.playing}
           src      = "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
         />
       </VideoPlayerLayout>
