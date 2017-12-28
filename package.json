@@ -4,7 +4,7 @@
   "description": "",
   "main": "webpack.config.dev.js",
   "scripts": {
-    "build:dev": "webpack --config ./webpack.dev.config.js",
+    "build:dev": "webpack --config ./webpack.dev.config.js --watch",
     "build": "webpack",
     "build:local": "webpack --env.NODE_ENV=local",
     "build:prod": "webpack -p --env.NODE_ENV=production"

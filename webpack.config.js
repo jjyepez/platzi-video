@@ -16,7 +16,6 @@ module.exports = (env) => {
 
   return {
     entry: {
-
       'home': path.resolve(__dirname, 'src/entries/home.js'),
     },
     output: {
@@ -28,6 +27,7 @@ module.exports = (env) => {
     devServer: {
       port: 9000,
     },
+    devtool: 'eval-source-map',
     module: {
       rules: [
         {
