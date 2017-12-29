@@ -1,0 +1,10 @@
+.Avatar {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  float: left;
+  margin-right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+}

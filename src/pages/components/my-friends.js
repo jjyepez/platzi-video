@@ -4,7 +4,7 @@ import Friend from './friend'
 
 const MyFriends = props => (
 	<div className = "MyFriends">
-		<h1 class="MyFriends-title">Playlists de Amigos</h1>
+		<h1 className = "MyFriends-title">Playlists de Amigos</h1>
 		{
 			props.data.map( item => (
 					<Friend

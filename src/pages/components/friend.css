@@ -1,13 +1,6 @@
 .Friend {
   display: block;
-  margin: .5rem;
-}
-.Friend-avatar {
-  float: left;
-  margin-right: 1rem;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 100%;
+  margin: 1rem;
 }
 .Friend-nombre {
   vertical-align: middle;

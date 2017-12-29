@@ -1,16 +1,23 @@
 import React from 'react'
 import logoBase64 from '../../../images/logo.png'
 import './related.css'
-//import MyPlaylist from './my-play-list'
+import Scroller from '../../libs/components/scroller'
+import MyPlaylist from './my-playlist'
 import MyFriends  from './my-friends'
 
-//      <MyPlaylist data = {props.myPlaylirt} />
 function Related(props) {
   return (
     <div className = "Related">
-      <img className   = "logo" src={logoBase64} />
-
-      <MyFriends  data = {props.friends} />
+      <div>
+        <img
+          className = "Related-logo"
+          src={logoBase64}
+        />
+      </div>
+      <Scroller>
+        <MyPlaylist data = {props.myPlaylist} />
+        <MyFriends  data = {props.friends} />
+      </Scroller>
     </div>
   )
 }

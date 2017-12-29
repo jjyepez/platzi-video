@@ -1,4 +1,7 @@
 .Categories {
   margin-left: 300px;
-  padding-left: 10px;
+  padding-left: 1rem;
+  background-color: #FFF;
+  height: 100vh;
+  overflow: hidden;
 }

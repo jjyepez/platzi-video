@@ -2,15 +2,15 @@
   position: fixed;
   display: flex;
   flex-direction: column;
-  overflow: scroll;
   left: 0;
   top: 0;
-  height: 100%;
   width: 300px;
+  max-height: 100vh;
+  height: inherit;
   background-color: #171B2F;
 }
-.logo {
-  margin-left: 20px ;
+.Related-logo {
+  margin: 1rem 0 0 5px;
   width: 260px;
-  height: 73px;
+  height: 75px;
 }

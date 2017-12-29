@@ -22,13 +22,12 @@ class Home extends Component {
     })
   }
   render(){
-console.log(this.props.extras.myFriends)
     return (
       <HandleError>
         <HomeLayout>
           <Related
-            //myPlaylist = {this.props.extraData.myPlaylist}
-            friends  = {this.props.extras.myFriends}
+            myPlaylist = {this.props.extras.myPlaylist}
+            friends    = {this.props.extras.myFriends}
           />
           <Categories
             //myUserInfo           = {this.props.extraData.myUserInfo}

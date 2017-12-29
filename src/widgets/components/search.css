@@ -1,13 +1,25 @@
 .Search-input {
-  margin: 1rem 0;
+  margin: 1.5rem 0;
   padding: .5rem 1rem;
-  border-radius: 50px;
-  border: 1px solid #ccc;
+  border-radius: 5px;
+  border: 1px solid #ddd;
   outline: none;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   width: 400px;
   color: #555;
+  background-color: #f0f0f0;
+  box-shadow: 1px 1px 3px rgba(0,0,0,.2) inset;
+  padding-right: 35px;
 }
-.Search-input:focus {
-  background-color: #fcfcfc;
+.Search-input:hover, .Search-input:focus {
+  background-color: #e7e7e7;
+}
+.Search-button {
+  position: relative;
+  margin-left: -37px;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  height: 35px;
+  vertical-align: middle;
 }

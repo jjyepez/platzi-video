@@ -3,7 +3,7 @@ import Search from '../components/search'
 
 class SearchContainer extends Component {
 	state = {
-		inputValue: 'Luis Fonsi'
+		inputValue: '' // --- valor por defecto
 	}
 	// --- los metodos deben crearse como arrow functions .. no como funciones estandar para poder usar internamente -this-
 	handleSubmit = e => {

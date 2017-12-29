@@ -1,0 +1,7 @@
+.Scroller {
+  height: inherit;
+  overflow: hidden;
+}
+.Scroller:focus, .Scroller:hover {
+  overflow-y: auto;
+}

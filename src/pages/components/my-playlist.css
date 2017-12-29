@@ -1,0 +1,28 @@
+.MyPlaylist {
+  display: flex;
+  flex-direction: column;
+  color: #FFF;
+}
+.MyPlaylist-title{
+  margin: .5rem;
+  margin-left: 1rem;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+.MyPlaylist-item {
+  margin: .5rem 0 .5rem 1rem;
+  font-size: .85rem;
+  white-space: nowrap;
+}
+.MyPlaylist-itemPosition {
+  display: inline-block;
+  font-weight: bold;
+  width: 33px;
+  vertical-align: top;
+}
+.MyPlaylist-itemTitle {
+  display: inline-block;
+  line-height: 1.25rem;
+  white-space: normal;
+  width: 230px;
+}

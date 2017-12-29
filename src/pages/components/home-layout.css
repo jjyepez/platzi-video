@@ -2,3 +2,6 @@ body {
   margin: 0;
   font-family: monospace, 'sans-serif';
 }
+.HomeLayout {
+  height: 100vh;
+}

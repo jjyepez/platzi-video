@@ -1,11 +1,11 @@
 import React from 'react'
 import './friend.css'
+import Avatar from '../../libs/components/avatar'
 
 const Friend = props => (
   <div className = "Friend">
-    <img
-      className = "Friend-avatar"
-      src       = {props.avatar}
+    <Avatar
+      imageURL  = {props.avatar}
     />
     <div className = "Friend-nombre">
       <span>{props.nombre} {props.apellido}</span>
