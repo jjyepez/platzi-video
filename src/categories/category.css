@@ -1,20 +1,19 @@
 .Category {
-  width: 100%;
+  width: inherit;
   position: relative;
   height: 320px;
+  margin: 0 1rem;
 }
-.Category-descripcion {
+.Category-description {
   margin: 0;
-  font-family: monospace, 'sans-serif';
   font-size: .75rem;
   font-weight: normal;
   color: #777;
 }
-.Category-titulo {
+.Category-title {
   margin: 0;
-  font-family: monospace, 'sans-serif';
-  font-size: 1.25rem;
-  margin: 0rem 0 1rem 0;
+  font-size: 1.2rem;
+  margin: .25rem 0 1rem 0;
   color: #44546b;
   text-transform: uppercase;
 }

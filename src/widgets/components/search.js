@@ -3,26 +3,27 @@ import './search.css'
 import SearchIcon from '../../icons/components/search'
 
 const Search = props => (
-	<form
-		className = "Search"
-		onSubmit  = {props.handleSubmit}
-	>
-		<input
-			ref					= {props.setRef}
-			onChange 		= {props.handleChange}
-			value 			= {props.value}
-			type        = "text"
-			placeholder = "Busca tu video favorito"
-			className   = "Search-input"
-			name 				= "search"
-		/>
-		<button className="Search-button">
-			<SearchIcon
-				size = "20"
-				color = "#44546b"
+	<div className = "Search">
+		<form
+			onSubmit  = {props.handleSubmit}
+		>
+			<input
+				ref					= {props.setRef}
+				onChange 		= {props.handleChange}
+				value 			= {props.value}
+				type        = "text"
+				placeholder = "Busca tu video favorito"
+				className   = "Search-input"
+				name 				= "search"
 			/>
-		</button>
-	</form>
+			<button className="Search-button">
+				<SearchIcon
+					size = "20"
+					color = "#44546b"
+				/>
+			</button>
+		</form>
+	</div>
 )
 
 export default Search

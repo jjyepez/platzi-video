@@ -7,10 +7,7 @@ const MyFriends = props => (
 		<h1 className = "MyFriends-title">Playlists de Amigos</h1>
 		{
 			props.data.map( item => (
-					<Friend
-						key 			= {item.id}
-						{...item}
-					/>
+					<Friend key = {item.id} {...item}/>
 				)
 			)
 		}

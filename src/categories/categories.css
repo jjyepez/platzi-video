@@ -1,7 +1,16 @@
 .Categories {
   margin-left: 300px;
-  padding-left: 1rem;
   background-color: #FFF;
   height: 100vh;
   overflow: hidden;
+  width: Calc(100vw - 300px);
+}
+.Categories-header {
+  width: inherit;
+  display: flex;
+  flex-direction: row;
+  /*padding: 0 1rem;*/
+}
+.Categories-scroller {
+  padding: 0 1rem;
 }

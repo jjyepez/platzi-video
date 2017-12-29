@@ -1,0 +1,64 @@
+/* --- responsividad ---*/
+
+/* --- Desktop --- */
+@media only screen and (min-width: 1023px) {
+  .Search-input {
+    width: 400px;
+  }
+  .UserInfo {
+    width: 50%
+  }
+}
+/* --- Tablets --- */
+@media only screen and (max-width: 1024px) {
+  .Search-input {
+    width: 350px;
+  }
+  .UserInfo-name {
+    display: none;
+  }
+}
+/* --- Phablets --- */
+@media only screen and (max-width: 640px) {
+  .Search-input {
+    width: 300px;
+  }
+  .UserInfo-name {
+    display: none;
+  }
+  .Related {
+    display: none;
+  }
+  .Categories {
+    margin-left: 0;
+    width: inherit;
+  }
+  .UserInfo-chevron,.UserInfo-name {
+    display: none;
+  }
+}
+/* --- Phones --- */
+@media only screen and (max-width: 360px) {
+  .Category {
+    margin: 0;
+    text-align: center;
+  }
+  .Related {
+    display: none;
+  }
+  .Categories {
+    margin-left: 0;
+    width: inherit;
+  }
+  .Search-input {
+    width: 200px;
+    margin: 1rem;
+    margin-right: initial;
+  }
+  .UserInfo .Avatar {
+    margin-top: 1rem;
+  }
+  .UserInfo-chevron,.UserInfo-name {
+    display: none;
+  }
+}

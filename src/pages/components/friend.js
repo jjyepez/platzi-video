@@ -5,7 +5,8 @@ import Avatar from '../../libs/components/avatar'
 const Friend = props => (
   <div className = "Friend">
     <Avatar
-      imageURL  = {props.avatar}
+      size     = {30}
+      imageURL = {props.avatar}
     />
     <div className = "Friend-nombre">
       <span>{props.nombre} {props.apellido}</span>

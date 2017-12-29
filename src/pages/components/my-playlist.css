@@ -4,8 +4,7 @@
   color: #FFF;
 }
 .MyPlaylist-title{
-  margin: .5rem;
-  margin-left: 1rem;
+  margin: .5rem 1rem 1rem 1rem;
   text-transform: uppercase;
   font-size: 1.2rem;
 }

@@ -30,7 +30,7 @@ class Home extends Component {
             friends    = {this.props.extras.myFriends}
           />
           <Categories
-            //myUserInfo           = {this.props.extraData.myUserInfo}
+            myUserInfo           = {this.props.extras.myUserInfo}
             categories           = {this.props.data.categories}
             handleOpenModalClick = {this.handleOpenModal}
           />
