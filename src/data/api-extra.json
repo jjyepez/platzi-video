@@ -1,0 +1,125 @@
+
+{
+	"myUserInfo": {
+		"id":0,
+		"nombre":"Julio J",
+		"apellido":"Yépez",
+		"avatar":"https://www.gravatar.com/avatar/e344fc33031f6a7dcc2c4603c66710a5",
+		"username":"@jjyepez"
+	},
+	"myPlaylist": [
+		{
+			"id":0,
+			"title":"Sed eget"
+		},
+		{
+			"id":1,
+			"title":"Eu et consectetur finibus"
+		},
+		{
+			"id":2,
+			"title":"Purus quis eros ante purus"
+		},
+		{
+			"id":3,
+			"title":"Eget velit est mollis"
+		},
+		{
+			"id":4,
+			"title":"Convallis mauris sollicitudin sit"
+		},
+		{
+			"id":5,
+			"title":"Sollicitudin lectus ipsum"
+		},
+		{
+			"id":6,
+			"title":"Rhoncus sit"
+		},
+		{
+			"id":7,
+			"title":"Fringilla faucibus mattis ligula"
+		},
+		{
+			"id":8,
+			"title":"Posuere convallis rutrum mattis"
+		},
+		{
+			"id":9,
+			"title":"Quisque porttitor phasellus vitae"
+		}
+	],
+	"myFriends": [
+		{
+			"id":0,
+			"nombre":"Alirio",
+			"apellido":"Lopez",
+			"avatar":"http://noesishosting.com/sw/loremdata/img/avatar/0.jpg",
+			"username":"@estrella"
+		},
+		{
+			"id":1,
+			"nombre":"Dederica",
+			"apellido":"Bermudez",
+			"avatar":"http://noesishosting.com/sw/loremdata/img/avatar/46.jpg",
+			"username":"@estrellita"
+		},
+		{
+			"id":2,
+			"nombre":"Valeria",
+			"apellido":"Hidalgo",
+			"avatar":"http://noesishosting.com/sw/loremdata/img/avatar/36.jpg",
+			"username":"@nerdis"
+		},
+		{
+			"id":3,
+			"nombre":"Xavier",
+			"apellido":"Hernandez",
+			"avatar":"http://noesishosting.com/sw/loremdata/img/avatar/44.jpg",
+			"username":"@elvenezolano"
+		},
+		{
+			"id":4,
+			"nombre":"Olegario",
+			"apellido":"Jaimes",
+			"avatar":"http://noesishosting.com/sw/loremdata/img/avatar/32.jpg",
+			"username":"@ingeniero"
+		},
+		{
+			"id":5,
+			"nombre":"Kevin",
+			"apellido":"Klaus",
+			"avatar":"http://noesishosting.com/sw/loremdata/img/avatar/36.jpg",
+			"username":"@mago"
+		},
+		{
+			"id":6,
+			"nombre":"Mauro",
+			"apellido":"Castillo",
+			"avatar":"http://noesishosting.com/sw/loremdata/img/avatar/22.jpg",
+			"username":"@mami"
+		},
+		{
+			"id":7,
+			"nombre":"Dana",
+			"apellido":"Yepez",
+			"avatar":"http://noesishosting.com/sw/loremdata/img/avatar/50.jpg",
+			"username":"@venezolana"
+		},
+		{
+			"id":8,
+			"nombre":"Vanessa",
+			"apellido":"Arias",
+			"avatar":"http://noesishosting.com/sw/loremdata/img/avatar/36.jpg",
+			"username":"@userito"
+		},
+		{
+			"id":9,
+			"nombre":"Edmundo",
+			"apellido":"Guevara",
+			"avatar":"http://noesishosting.com/sw/loremdata/img/avatar/16.jpg",
+			"username":"@soyusuer"
+		}
+	]
+
+}

@@ -1,5 +1,8 @@
 .Related {
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
   left: 0;
   top: 0;
   height: 100%;
@@ -8,4 +11,6 @@
 }
 .logo {
   margin-left: 20px ;
+  width: 260px;
+  height: 73px;
 }

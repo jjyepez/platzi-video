@@ -1,0 +1,13 @@
+.MyFriends {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	font-family: monospace, 'sans-serif';
+	color: #FFF;
+}
+.MyFriends-title {
+	margin: .5rem;
+	margin-left: 1rem;
+	text-transform: uppercase;
+	font-size: 1.2rem;
+}

@@ -19,6 +19,8 @@ class VideoPlayerContainer extends Component {
     timeFloat    : 0,
     progress     : 0,
     loading      : true,
+    isMuted      : false,
+    volumeLevel  : 1,
   }
   togglePlay = e => {
     //if( this.state.playing ) this.video.pause(); else this.video.play()
@@ -66,9 +68,21 @@ class VideoPlayerContainer extends Component {
     })
   }
   handleVolumeChange = event => {
-    this.video.volume = event.target.value
+    this.setState({
+      volumeLevel: event.target.value,
+    })
+    this.video.volume = this.state.volumeLevel
   }
-    render(){
+  toggleMute = event => {
+    this.setState({
+      isMuted: ! this.state.isMuted
+    })
+    //this.sliderVolume.value = this.state.isMuted ? 0 : this.state.volumeLevel
+  }
+  // setRefSlider = element => {
+  //   this.sliderVolume = element
+  // }
+  render(){
     return(
       <VideoPlayerLayout>
         <Title
@@ -90,6 +104,10 @@ class VideoPlayerContainer extends Component {
           />
           <Volume
             handleVolume = {this.handleVolumeChange}
+            handleClick  = {this.toggleMute}
+            mute         = {this.state.isMuted.toString()}
+            volume       = {parseFloat( this.state.volumeLevel )}
+            //setRefSlider = {this.setRefSlider}
           />
         </PlayerControls>
         <Video
@@ -100,7 +118,7 @@ class VideoPlayerContainer extends Component {
           handleReady          = {this.handleReady}
           autoplay = {this.props.autoplay}
           playing  = {this.state.playing}
-          src      = "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
+          src      = "https://assets14.ign.com/videos/zencoder/2017/11/18/1280/73b6f1771c8d9841c3351c3df41bfe41-1910000-1511019956-w.mp4"
         />
         { this.state.loading && <Spinner /> }
       </VideoPlayerLayout>

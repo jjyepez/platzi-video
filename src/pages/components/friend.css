@@ -1,0 +1,19 @@
+.Friend {
+  display: block;
+  margin: .5rem;
+}
+.Friend-avatar {
+  float: left;
+  margin-right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+}
+.Friend-nombre {
+  vertical-align: middle;
+  font-size: .9rem;
+  line-height: 2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: inherit;
+}

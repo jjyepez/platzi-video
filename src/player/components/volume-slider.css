@@ -6,8 +6,9 @@
   display: none;
   width: 5rem;
   height: 30px;
-  bottom: 4px;
-  padding-left: .25rem;
+  bottom: 1px;
+  left: 10px;
+  padding: .25rem;
 }
 .VolumeSlider:hover {
   display: block;

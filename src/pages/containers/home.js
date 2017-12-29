@@ -22,14 +22,16 @@ class Home extends Component {
     })
   }
   render(){
+console.log(this.props.extras.myFriends)
     return (
       <HandleError>
         <HomeLayout>
-          <Related />
-          <VideoPlayer
-            autoplay = {false}
+          <Related
+            //myPlaylist = {this.props.extraData.myPlaylist}
+            friends  = {this.props.extras.myFriends}
           />
           <Categories
+            //myUserInfo           = {this.props.extraData.myUserInfo}
             categories           = {this.props.data.categories}
             handleOpenModalClick = {this.handleOpenModal}
           />
@@ -37,7 +39,9 @@ class Home extends Component {
             this.state.modalVisible &&
             <ModalContainer>
               <Modal handleClick = {this.handleCloseModal}>
-                <h3>Este es el contenido del Modal Container</h3>
+                <VideoPlayer
+                  autoplay = {false}
+                />
               </Modal>
             </ModalContainer>
           }

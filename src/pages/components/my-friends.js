@@ -1,0 +1,20 @@
+import React from 'react'
+import './my-friends.css'
+import Friend from './friend'
+
+const MyFriends = props => (
+	<div className = "MyFriends">
+		<h1 class="MyFriends-title">Playlists de Amigos</h1>
+		{
+			props.data.map( item => (
+					<Friend
+						key 			= {item.id}
+						{...item}
+					/>
+				)
+			)
+		}
+	</div>
+)
+
+export default MyFriends
