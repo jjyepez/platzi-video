@@ -9,8 +9,4 @@
   width: inherit;
   display: flex;
   flex-direction: row;
-  /*padding: 0 1rem;*/
-}
-.Categories-scroller {
-  padding: 0 1rem;
 }

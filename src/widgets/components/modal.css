@@ -1,29 +1,37 @@
 .Modal {
   position: fixed;
   z-index: 100;
-  width: 600px;
+  width: 700px;
   height: 400px;
   margin-top: -200px;
-  margin-left: -300px;
+  margin-left: -350px;
   left: 50%;
   top: 50%;
+  border: 2px solid #333;
   background-color: #fff;
-  border-radius: 20px;
+  border-radius: 14px;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
 }
 .Modal-close {
+  opacity: .5;
+  color: #fff;
   position: absolute;
   border-radius: 100%;
   width: 2rem;
   height: 2rem;
-  line-height: 1.9rem;
+  line-height: 1.85rem;
   text-align: center;
-  font-size: 1.5rem;
-  background-color: #FFF;
-  border: 1px solid #ccc;
-  top: 0;
-  right: 0;
-  margin: 1rem;
+  font-size: 1.25rem;
+  background-color: rgba(128,128,128,.5);
+  border: 2px solid #fff;
+  top: 5px;
+  right: 5px;
+  margin: 0;
   cursor: pointer;
   outline: none;
+  z-index: 101;
+}
+.Modal-close:hover {
+  opacity: 1;
 }

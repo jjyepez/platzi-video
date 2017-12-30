@@ -7,14 +7,17 @@ function Playlist(props) {
       <div  className = "Playlist-scroller">
         {
           props.playlist.map( item => {
-            return <Media
-                  title  = {item.title} 
-                  author = {item.author} 
-                  image  = {item.cover} 
-                  type   = {item.type}
-                  key    = {item.id}
-                  handleClick = {props.handleOpenModalClick}
-                />
+            return (
+              <Media
+                title  = {item.title}
+                author = {item.author}
+                image  = {item.cover}
+                type   = {item.type}
+                key    = {item.id}
+                src    = {item.src}
+                openModal = {props.handleOpenModalClick}
+              />
+            )
           })
         }
       </div>

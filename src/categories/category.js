@@ -2,7 +2,6 @@ import React from 'react'
 import Playlist from '../playlist/componentes/playlist.js'
 import '../categories/category.css'
 
-
 function Category(props){
   return (
     <div  className = "Category">

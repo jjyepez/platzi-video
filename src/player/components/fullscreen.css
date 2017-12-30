@@ -1,13 +1,13 @@
-.PlayPause {
-  width: 50px;
+.FullScreen {
+  width: 40px;
 }
-.PlayPause button {
+.FullScreen button {
   background-color: transparent;
   border: none;
   outline: none;
   cursor: pointer;
   opacity: .5;
 }
-.PlayPause button:hover {
+.FullScreen button:hover {
   opacity: 1;
 }

@@ -1,5 +1,6 @@
 .Volume {
   position: relative;
+  width: 40px;
 }
 .Volume svg {
   width: 30px;

@@ -1,36 +1,35 @@
 import React, { Component } from 'react'
 import VideoPlayerLayout from '../components/video-player-layout'
-import Title from '../components/title'
-import Video from '../containers/video'
-import PlayPause from '../components/play-pause'
-import Volume from '../components/volume'
-import Timer from '../components/timer'
-import PlayerControls from '../components/video-player-controls'
+import PlayerControls    from '../components/video-player-controls'
+import Title       from '../components/title'
+import Video       from '../containers/video'
+import PlayPause   from '../components/play-pause'
+import Volume      from '../components/volume'
+import Timer       from '../components/timer'
 import ProgressBar from '../components/progress-bar'
-import Spinner from '../components/spinner'
-import { formatTime } from '../../libs/utilities.js'
+import Spinner     from '../components/spinner'
+import { formatTime, isFullScreen, requestFullScreen, exitFullScreen } from '../../libs/utilities.js'
+import FullScreen  from '../components/fullscreen'
 
 class VideoPlayerContainer extends Component {
   state = {
     playing      : false,
-    duration     : '00',
-    time         : '00',
+    duration     : '00:00',
+    time         : '00:00',
     durationFloat: 0,
     timeFloat    : 0,
     progress     : 0,
     loading      : true,
-    isMuted      : false,
+    mute         : false,
     volumeLevel  : 1,
   }
   togglePlay = e => {
-    //if( this.state.playing ) this.video.pause(); else this.video.play()
     this.setState( prevState => ({ // --- se puede pasar una funcion que recibira el state anterior por defecto
         playing: ! prevState.playing // --- toggling
       })
     )
   }
   componentDidMount(){
-    // --- ya se renderizó el componente
     this.setState({
       playing: ! this.props.autoplay
     })
@@ -38,9 +37,9 @@ class VideoPlayerContainer extends Component {
   handleLoadedMetadata = event => {
     this.video = event.target
     this.setState({
-      duration: formatTime( this.video.duration ),
+      duration     : formatTime( this.video.duration ),
       durationFloat: this.video.duration,
-      loading: false
+      loading      : false
     })
   }
   handleTimeUpdate = event => {
@@ -68,25 +67,39 @@ class VideoPlayerContainer extends Component {
     })
   }
   handleVolumeChange = event => {
+    this.video.volume = event.target.value
     this.setState({
       volumeLevel: event.target.value,
     })
-    this.video.volume = this.state.volumeLevel
   }
   toggleMute = event => {
     this.setState({
-      isMuted: ! this.state.isMuted
+      mute: ! this.state.mute
     })
-    //this.sliderVolume.value = this.state.isMuted ? 0 : this.state.volumeLevel
+    this.video.muted  = ! this.state.mute
+    this.slider.value = ! this.state.mute ? 0 : this.state.volumeLevel
   }
-  // setRefSlider = element => {
-  //   this.sliderVolume = element
-  // }
+  setRefSlider = element => {
+    // --- el input:range ha sido capturado a traves de todos los nivels de componentes! -- yeii!
+    this.slider = element
+  }
+  toggleFullScreen = event => {
+    if( ! isFullScreen() ) {
+      requestFullScreen( this.player )
+    } else {
+      exitFullScreen( this.player )
+    }
+  }
+  setRefPlayer = element => {
+    this.player = element
+  }
   render(){
     return(
-      <VideoPlayerLayout>
+      <VideoPlayerLayout
+        setRefPlayer = {this.setRefPlayer}
+      >
         <Title
-          title = "Este es el título del video que se esta reproduciendo"
+          title = {this.props.title}
         />
         <PlayerControls>
           <PlayPause
@@ -105,9 +118,12 @@ class VideoPlayerContainer extends Component {
           <Volume
             handleVolume = {this.handleVolumeChange}
             handleClick  = {this.toggleMute}
-            mute         = {this.state.isMuted.toString()}
-            volume       = {parseFloat( this.state.volumeLevel )}
-            //setRefSlider = {this.setRefSlider}
+            mute         = {this.state.mute}
+            volume       = {this.state.volumeLevel}
+            setRefSlider = {this.setRefSlider}
+          />
+          <FullScreen
+            handleClick   = {this.toggleFullScreen}
           />
         </PlayerControls>
         <Video
@@ -118,7 +134,7 @@ class VideoPlayerContainer extends Component {
           handleReady          = {this.handleReady}
           autoplay = {this.props.autoplay}
           playing  = {this.state.playing}
-          src      = "https://assets14.ign.com/videos/zencoder/2017/11/18/1280/73b6f1771c8d9841c3351c3df41bfe41-1910000-1511019956-w.mp4"
+          src      = {this.props.src}
         />
         { this.state.loading && <Spinner /> }
       </VideoPlayerLayout>

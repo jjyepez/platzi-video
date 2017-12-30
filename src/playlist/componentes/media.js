@@ -3,9 +3,15 @@ import PropTypes from 'prop-types'
 import './media.css'
 
 class Media extends PureComponent {
+	openModal = event => {
+		this.props.openModal( this.props )
+	}
 	render() {
 		return (
-			<div className = "Media tarjeta" onClick={this.props.handleClick}>
+			<div
+				className = "Media tarjeta"
+				onClick   = {this.openModal}
+			>
 				<div className = "Media-cover">
 					<img
 						className = "Media-image"
@@ -17,7 +23,7 @@ class Media extends PureComponent {
 					<h3 className = "Media-title">
 						{this.props.title}
 					</h3>
-					<p  className = "Media-author">
+					<p className = "Media-author">
 						{this.props.author}
 					</p>
 				</div>
@@ -31,6 +37,7 @@ Media.propTypes = {
 	image : PropTypes.string,
 	title : PropTypes.string.isRequired,
 	author: PropTypes.string,
+	src   : PropTypes.string,
 	type  : PropTypes.oneOf(['video','audio']) // sólo válidos los valores de la lista
 }
 
