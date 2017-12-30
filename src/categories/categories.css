@@ -4,6 +4,8 @@
   height: 100vh;
   overflow: hidden;
   width: Calc(100vw - 300px);
+  display: flex;
+  flex-direction: column;
 }
 .Categories-header {
   width: inherit;

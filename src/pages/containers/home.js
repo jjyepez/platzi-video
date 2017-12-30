@@ -12,21 +12,29 @@ class Home extends Component {
     modalVisible: false,
   }
   handleOpenModal = media => {
-console.log('home',media, this.props)
     this.setState({
       modalVisible: true,
       media // --- equivale a media: media
     })
+    this.homeLayout.classList.add('blur')
+    this.homeLayout.classList.add('gris')
+  }
+  setHomeRef = element => {
+    this.homeLayout = element
   }
   handleCloseModal = event => {
     this.setState({
       modalVisible: false,
     })
+    this.homeLayout.classList.remove('blur')
+    this.homeLayout.classList.remove('gris')
   }
   render(){
     return (
       <HandleError>
-        <HomeLayout>
+        <HomeLayout
+          handleRefHome = {this.setHomeRef}
+        >
           <Related
             myPlaylist = {this.props.extras.myPlaylist}
             friends    = {this.props.extras.myFriends}

@@ -9,4 +9,15 @@ body {
 }
 .HomeLayout {
   height: 100vh;
+  /*transition: -webkit-filter 2s ease,-moz-filter 2s ease, filter 2s ease;*/
+}
+.blur {
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+}
+.gris {
+  filter: greyscale(10%);
+  -webkit-filter: greyscale(10%);
+  -moz-filter: greyscale(10%);
 }

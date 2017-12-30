@@ -3,7 +3,10 @@ import './home-layout.css'
 
 function HomeLayout(props){
   return(
-    <section className="HomeLayout">
+    <section
+      className = "HomeLayout"
+      ref       = {props.handleRefHome}
+    >
       {props.children}
     </section>
   )
