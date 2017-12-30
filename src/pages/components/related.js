@@ -11,7 +11,7 @@ function Related(props) {
       <div>
         <img
           className = "Related-logo"
-          src={logoBase64}
+          src="./dist/images/logo.c06f5e5a2ae47006c0b77be4de6a2077.png"
         />
       </div>
       <Scroller>
