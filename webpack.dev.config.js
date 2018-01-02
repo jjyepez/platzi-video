@@ -37,8 +37,8 @@ module.exports = {
           loader: 'url-loader',
           options: {
             limit: 1000000,
-            fallback: 'file-loader',
-            name: 'img/[name].[hash].[ext]',
+            fallback: 'file-loader'
+            // --- name: 'img/[name].[hash].[ext]',
           }
         }
       }
