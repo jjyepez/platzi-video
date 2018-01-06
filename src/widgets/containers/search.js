@@ -8,6 +8,7 @@ class SearchContainer extends Component {
 	// --- los metodos deben crearse como arrow functions .. no como funciones estandar para poder usar internamente -this-
 	handleSubmit = e => {
 		e.preventDefault()
+		console.log( this.inputBusqueda.value )
 	}
 	setInputRef = element => {
 		this.inputBusqueda = element

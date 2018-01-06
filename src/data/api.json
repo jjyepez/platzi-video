@@ -1,7 +1,7 @@
 {
   "categories": [
     {
-      "id": 1,
+      "id": "1",
       "description": "Lo mejor de la semana",
       "title": "Destacados",
       "playlist": [
@@ -11,7 +11,7 @@
           "type": "video",
           "cover": "./images/covers/responsive.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 1
+          "id": "1"
         },
         {
           "title": "Cómo optimzar la carga de un website",
@@ -19,7 +19,7 @@
           "type": "video",
           "cover": "./images/covers/optimizar.jpg",
           "src": "http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4",
-          "id": 2
+          "id": "2"
         },
         {
           "title": "Qué es Bitcoin",
@@ -27,7 +27,7 @@
           "type": "video",
           "cover": "./images/covers/bitcoin.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 3
+          "id": "3"
         },
         {
           "title": "Que pasó con HTML5",
@@ -35,7 +35,7 @@
           "type": "video",
           "cover": "./images/covers/html5.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 4
+          "id": "4"
         },
         {
           "title": "Lo mejor de Mejorando.la",
@@ -43,12 +43,12 @@
           "type": "video",
           "cover": "./images/covers/mejorandola.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 5
+          "id": "5"
         }
       ]
     },
     {
-      "id": 0,
+      "id": "0",
       "description": "Videos super cool!",
       "title": "Trailers de Estrenos",
       "playlist": [
@@ -58,7 +58,7 @@
           "type": "video",
           "cover": "http://trailers.apple.com/trailers/independent/monster-family/images/background.jpg",
           "src": "http://movietrailers.apple.com/movies/independent/monster-family/monster-family-clip-1_i320.m4v",
-          "id": 1
+          "id": "6"
         },
         {
           "title": "Star Wars: The Last Jedi",
@@ -66,7 +66,7 @@
           "type": "video",
           "cover": "https://blogimg.goo.ne.jp/user_image/44/12/79b194cfd17dbf8002c1c732cec71290.jpg",
           "src": "http://movietrailers.apple.com/movies/lucasfilm/star-wars-the-last-jedi/the-last-jedi-tv-spot-awake_i320.m4v",
-          "id": 2
+          "id": "7"
         },
         {
           "title": "Spiderman",
@@ -74,7 +74,7 @@
           "type": "video",
           "cover": "http://mojtv.hr/images/c84212b8-b0a2-4535-9a72-5ad53a5af42d.jpg",
           "src": "http://movietrailers.apple.com/movies/sony_pictures/spider-man-into-the-spider-verse/spider-man-into-the-spider-verse-trailer-1_i320.m4v",
-          "id": 3
+          "id": "8"
         },
         {
           "title": "Blade Runner 2049",
@@ -82,7 +82,7 @@
           "type": "video",
           "cover": "http://trailers.apple.com/trailers/wb/blade-runner-2049/images/background.jpg",
           "src": "http://movietrailers.apple.com/movies/wb/blade-runner-2049/blade-runner-2049-featurette-time-to-live_i320.m4v",
-          "id": 4
+          "id": "9"
         },
         {
           "title": "Avengers: Infinity War",
@@ -90,12 +90,12 @@
           "type": "video",
           "cover": "http://trailers.apple.com/trailers/marvel/avengers-infinity-war/images/background.jpg",
           "src": "http://movietrailers.apple.com/movies/marvel/avengers-infinity-war/avengers-infinity-war-teaser-1-h264_i320.m4v",
-          "id": 5
+          "id": "10"
         }
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "description": "Lo mejor para concentrarte",
       "title": "Para programar",
       "playlist": [
@@ -105,7 +105,7 @@
           "type": "video",
           "cover": "./images/covers/one-more-time.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 1
+          "id": "11"
         },
         {
           "title": "Midnight City",
@@ -113,7 +113,7 @@
           "type": "video",
           "cover": "./images/covers/midnight.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 5
+          "id": "12"
         },
         {
           "title": "Solar Sailer",
@@ -121,7 +121,7 @@
           "type": "video",
           "cover": "./images/covers/solar-sailer.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 2
+          "id": "13"
         },
         {
           "title": "The social network",
@@ -129,7 +129,7 @@
           "type": "video",
           "cover": "./images/covers/social.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 4
+          "id": "14"
         },
         {
           "title": "No vaya a ser",
@@ -137,12 +137,12 @@
           "type": "video",
           "cover": "./images/covers/no-vaya-a-ser.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 3
+          "id": "15"
         }
       ]
     },
     {
-      "id": 3,
+      "id": "3",
       "description": "Si no te queda de otra",
       "title": "Regueton",
       "playlist": [
@@ -152,7 +152,7 @@
           "type": "video",
           "cover": "./images/covers/despacito.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 1
+          "id": "16"
         },
         {
           "title": "Echame la culpa",
@@ -160,7 +160,7 @@
           "type": "video",
           "cover": "./images/covers/echame-la-culpa.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 3
+          "id": "17"
         },
         {
           "title": "Mi Gente",
@@ -168,7 +168,7 @@
           "type": "video",
           "cover": "./images/covers/mi-gente.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 2
+          "id": "18"
         },
         {
           "title": "Felices los 4",
@@ -176,7 +176,7 @@
           "type": "video",
           "cover": "./images/covers/felices.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 4
+          "id": "19"
         },
         {
           "title": "Me Rehúso",
@@ -184,7 +184,7 @@
           "type": "video",
           "cover": "./images/covers/rehuso.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 5
+          "id": "20"
         }
       ]
     }
