@@ -40,7 +40,8 @@ const store = createStore( // --- creando el store
 const render = () => { // --- Actualiza la UI
   const $container = document.getElementById('playlist')
   const playlist   = store.getState()
-  $container.innerHTML = ''
+  const $fCh       = $container.firstChild
+  while ( $fCh ) $container.remove( $fCh )
   playlist.forEach( item => {
     const $template = document.createElement('p')
           $template.textContent = item.title
