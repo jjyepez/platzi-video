@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  background: lightgray;
+  font-family: Arial;
+  padding-top: 55px;
+}
+form {
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+p {
+  margin: 10px;
+  background: black;
+  color: white;
+  padding: 5px;
+}

@@ -31,7 +31,7 @@ class VideoPlayerContainer extends Component {
   }
   componentDidMount(){
     this.setState({
-      playing: ! this.props.autoplay
+      playing: this.props.autoplay
     })
   }
   handleLoadedMetadata = event => {
