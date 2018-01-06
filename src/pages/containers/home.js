@@ -6,6 +6,8 @@ import ModalContainer from '../../widgets/containers/modal-container'
 import Modal          from '../../widgets/components/modal'
 import HandleError    from '../../error/containers/handle-error'
 import VideoPlayer    from '../../player/containers/video-player'
+// --- redux
+import { connect } from 'react-redux'
 
 class Home extends Component {
   state = {
@@ -62,4 +64,11 @@ class Home extends Component {
   }
 }
 
-export default Home
+function mapStateToProps ( state, props ){
+  return {
+    data  : state.data,
+    extras: state.extras
+  }
+}
+
+export default connect( mapStateToProps )( Home )

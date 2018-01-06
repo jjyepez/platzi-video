@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Search from '../components/search'
+// --- Redux
+import { connect } from 'react-redux'
 
 class SearchContainer extends Component {
 	state = {
@@ -8,10 +10,16 @@ class SearchContainer extends Component {
 	// --- los metodos deben crearse como arrow functions .. no como funciones estandar para poder usar internamente -this-
 	handleSubmit = e => {
 		e.preventDefault()
-		console.log( this.inputBusqueda.value )
+		console.log( this.input.value )
+		this.props.dispatch({ // --- Redux - dispatch
+			type: 'SEARCH_VIDEO',
+			payload: {
+				query: this.input.value
+			}
+		})
 	}
 	setInputRef = element => {
-		this.inputBusqueda = element
+		this.input = element
 	}
 	handleInputChange = e => {
 		this.setState({
@@ -30,4 +38,4 @@ class SearchContainer extends Component {
 	}
 }
 
-export default SearchContainer
+export default connect()(SearchContainer) // --- redux
