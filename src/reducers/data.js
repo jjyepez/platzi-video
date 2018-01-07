@@ -1,12 +1,19 @@
-function data( state, action ){
+function dataReducer( state, action ){
+
   switch ( action.type ) {
     case 'SEARCH_VIDEO': {
       let results = []
-      state.data.categories.forEach( category => {
-        results = results.concat(
-          category.playlist.filter( item => item.author.includes( action.payload.query ) )
-        )
-      })
+      if( action.payload.query ){
+        state.data.categories.forEach( category => {
+          // --- const patron = new RegExp(action.payload.query,'ig') // --- revisar
+          results = results.concat(
+            category.playlist.filter(
+              // --- item => { return patron.test( item.author ) } // --- revisar
+              item => item.author.toLowerCase().includes( action.payload.query.toLowerCase() )
+            )
+          )
+        })
+      }
       return { // --- un objeto
         ...state,
         search: results
@@ -17,5 +24,6 @@ function data( state, action ){
     default:
       return state
   }
+
 }
-export default data
+export default dataReducer // --- función Reducer para Redux

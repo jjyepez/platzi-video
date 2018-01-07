@@ -44,6 +44,7 @@ class Home extends Component {
           <Categories
             myUserInfo           = {this.props.extras.myUserInfo}
             categories           = {this.props.data.categories}
+            search               = {this.props.search}
             handleOpenModalClick = {this.handleOpenModal}
           />
           {
@@ -67,7 +68,8 @@ class Home extends Component {
 function mapStateToProps ( state, props ){
   return {
     data  : state.data,
-    extras: state.extras
+    extras: state.extras,
+    search: state.search
   }
 }
 

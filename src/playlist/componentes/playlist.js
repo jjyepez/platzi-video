@@ -11,7 +11,7 @@ function Playlist(props) {
               <Media
                 title  = {item.title}
                 author = {item.author}
-                image  = {item.cover}
+                cover  = {item.cover}
                 type   = {item.type}
                 key    = {item.id}
                 src    = {item.src}

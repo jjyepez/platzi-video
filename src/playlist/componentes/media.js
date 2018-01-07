@@ -9,13 +9,13 @@ class Media extends PureComponent {
 	render() {
 		return (
 			<div
-				className = "Media tarjeta"
+				className = {'Media tarjeta ' + this.props.className}
 				onClick   = {this.openModal}
 			>
 				<div className = "Media-cover">
 					<img
 						className = "Media-image"
-						src       = {this.props.image}
+						src       = {this.props.cover}
 						alt       = ""
 						width     = {260}
 						height    = {160}
@@ -34,7 +34,7 @@ class Media extends PureComponent {
 
 // -- validar los tipos de datos recibidos en las props
 Media.propTypes = {
-	image : PropTypes.string,
+	cover : PropTypes.string,
 	title : PropTypes.string.isRequired,
 	author: PropTypes.string,
 	src   : PropTypes.string,

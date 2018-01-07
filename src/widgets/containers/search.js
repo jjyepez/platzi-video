@@ -38,4 +38,4 @@ class SearchContainer extends Component {
 	}
 }
 
-export default connect()(SearchContainer) // --- redux
+export default connect()(SearchContainer) // --- Redux
