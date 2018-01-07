@@ -6,7 +6,7 @@ Incluye:
 - Tips de EcmaScript7
 - y mucho más
 
-#Lo Nuevo
+# Lo Nuevo
 Se han incorporado las funcionalidades
 extendidas en el Curso de Redux en Platzi
 
