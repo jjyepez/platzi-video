@@ -4,7 +4,7 @@ import './categories.css'
 import Search from '../widgets/containers/search'
 import UserInfo from '../widgets/components/user-info'
 import Scroller from '../libs/components/scroller'
-import Media    from '../playlist/componentes/media'
+import MediaContainer from '../playlist/containers/media'
 import '../playlist/componentes/media.css'
 
 function Categories(props){
@@ -24,11 +24,11 @@ function Categories(props){
           )
         }
         {
-          props.search.map( item => (
-              <Media
-                {...item}
+          props.search.map( mediaId => (
+              <MediaContainer
                 className = "Media-resultados"
-                key       = {item.id}
+                key       = {mediaId}
+                id        = {mediaId}
                 openModal = {props.handleOpenModalClick}
               />
             )

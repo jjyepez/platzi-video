@@ -1,10 +1,20 @@
-function dataReducer( state, action ){
+import data   from '../schemas/index'
+import extras from '../data/api-extra'
+
+const initialState = {
+	entities  : data.entities,
+	categories: data.result.categories,
+  search    : [],
+  extras,
+}
+
+function dataReducer( state = initialState, action ){
 
   switch ( action.type ) {
     case 'SEARCH_VIDEO': {
       let results = []
       if( action.payload.query ){
-        state.data.categories.forEach( category => {
+        state.categories.forEach( category => {
           // --- const patron = new RegExp(action.payload.query,'ig') // --- revisar
           results = results.concat(
             category.playlist.filter(

@@ -8,23 +8,27 @@ import '../css/style.css'
 // --- Redux
 import { Provider }    from 'react-redux'
 import { createStore } from 'redux'
-import reducer     		 from '../reducers/data'
+import reducer     		 from '../reducers/index'
 import data  from '../schemas/index.js'
 
 // --- console.log( normalizedData )
 
-const initialState = {
-	data: {
-		entities  : data.entities,
-		categories: data.result.categories
-	},
-	extras,
-	search: []
-}
+// const initialState = {
+// 	data: {
+// 		entities  : data.entities,
+// 		categories: data.result.categories
+// 		search: []
+// 		extras,
+// 	},
+// 	modal: {
+// 		visibility: false,
+// 		mediaId   : null,
+// 	}
+// }
 
 const store = createStore(
 	reducer,
-	initialState,
+	{}, // --- se va a definir el estado inicial de cada reducer en su propio archivo js
 	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 
