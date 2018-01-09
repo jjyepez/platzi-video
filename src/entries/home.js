@@ -1,7 +1,7 @@
 import React 	from 'react'
 import ReactDOM from 'react-dom'
 import Home		from '../pages/containers/home'
-import data 	from '../data/api.json'
+// --- import data 	from '../data/api.json'
 import extras	from '../data/api-extra.json'
 import '../css/style.css'
 
@@ -9,12 +9,15 @@ import '../css/style.css'
 import { Provider }    from 'react-redux'
 import { createStore } from 'redux'
 import reducer     		 from '../reducers/data'
-import normalizedData  from '../schemas/index.js'
+import data  from '../schemas/index.js'
 
-console.log( normalizedData )
+// --- console.log( normalizedData )
 
 const initialState = {
-	data,
+	data: {
+		entities  : data.entities,
+		categories: data.result.categories
+	},
 	extras,
 	search: []
 }
