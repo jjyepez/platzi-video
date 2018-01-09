@@ -9,6 +9,9 @@ import '../css/style.css'
 import { Provider }    from 'react-redux'
 import { createStore } from 'redux'
 import reducer     		 from '../reducers/data'
+import normalizedData  from '../schemas/index.js'
+
+console.log( normalizedData )
 
 const initialState = {
 	data,
