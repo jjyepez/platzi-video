@@ -12,7 +12,7 @@ function Categories(props){
     <div className   = "Categories">
       <div className = "Categories-header">
         <Search />
-        <UserInfo {...props.myUserInfo}/>
+        <UserInfo {...props.myUserInfo.toJS()}/>
       </div>
       <Scroller>
         {
@@ -24,21 +24,23 @@ function Categories(props){
           )
         }
         {
-          props.search.map( mediaId => (
-              <MediaContainer
-                className = "Media-resultados"
-                key       = {mediaId}
-                id        = {mediaId}
-                openModal = {props.handleOpenModalClick}
-              />
-            )
+          props.search.map( mediaId => {
+            return (
+                <MediaContainer
+                  className = "Media-resultados"
+                  key       = {mediaId}
+                  id        = {mediaId}
+                  openModal = {props.handleOpenModalClick}
+                />
+              )
+            }
           )
         }
         {
           props.categories.map( category => {
             return (
-            	<Category {...category}
-            		key                  = {category.id}
+            	<Category {...category.toJS()}
+            		key                  = {category.get('id')}
                 handleOpenModalClick = {props.handleOpenModalClick}
             	/>
             )

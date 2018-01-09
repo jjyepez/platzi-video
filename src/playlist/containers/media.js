@@ -6,7 +6,7 @@ class MediaContainer extends Component {
   render(){
     return (
       <Media
-        {...this.props.data}
+        { ...this.props.data }
         openModal = {this.props.openModal}
       />
     )
@@ -14,7 +14,8 @@ class MediaContainer extends Component {
 }
 
 function mapStateToProps( state, props ){
-  const mediaItem = state.data.entities.media[props.id]
+  const mediaItem = state.getIn(['data','entities','media',props.id])
+// --- console.log( mediaItem )
   return {
     data: mediaItem
   }

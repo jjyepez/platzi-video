@@ -10,7 +10,7 @@ class SearchContainer extends Component {
 	// --- los metodos deben crearse como arrow functions .. no como funciones estandar para poder usar internamente -this-
 	handleSubmit = e => {
 		e.preventDefault()
-		console.log( this.input.value )
+console.log( this.input.value )
 		this.props.dispatch({ // --- Redux - dispatch
 			type: 'SEARCH_VIDEO',
 			payload: {

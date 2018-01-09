@@ -1,10 +1,11 @@
+import { fromJS } from 'immutable'
 
-const initialState = {
+const initialState = fromJS({ // --- convierte el objeto a un Mapa
 	modal: {
 		visibility: false,
 		mediaId   : null,
 	}
-}
+})
 
 function modalReducer( state = initialState, action ){
 

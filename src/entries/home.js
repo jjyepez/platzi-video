@@ -1,6 +1,6 @@
-import React 	from 'react'
+import React 	  from 'react'
 import ReactDOM from 'react-dom'
-import Home		from '../pages/containers/home'
+import Home		  from '../pages/containers/home'
 // --- import data 	from '../data/api.json'
 import extras	from '../data/api-extra.json'
 import '../css/style.css'
@@ -11,24 +11,11 @@ import { createStore } from 'redux'
 import reducer     		 from '../reducers/index'
 import data  from '../schemas/index.js'
 
-// --- console.log( normalizedData )
-
-// const initialState = {
-// 	data: {
-// 		entities  : data.entities,
-// 		categories: data.result.categories
-// 		search: []
-// 		extras,
-// 	},
-// 	modal: {
-// 		visibility: false,
-// 		mediaId   : null,
-// 	}
-// }
+import { Map as map } from 'immutable' // --- se le coloca un alias en minusculas para verlo como funcion no como clase
 
 const store = createStore(
 	reducer,
-	{}, // --- se va a definir el estado inicial de cada reducer en su propio archivo js
+	map(), // --- se va a definir el estado inicial de cada reducer en su propio archivo js
 	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 

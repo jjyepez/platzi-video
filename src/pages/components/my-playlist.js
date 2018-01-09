@@ -10,10 +10,10 @@ const MyPlaylist = props => {
         props.data.map( item => (
             <div
               className = "MyPlaylist-item"
-              key       = {item.id}
+              key       = {item.get('id')}
             >
               <div className = "MyPlaylist-itemPosition">{c++}</div>
-              <div className = "MyPlaylist-itemTitle">{item.title}</div>
+              <div className = "MyPlaylist-itemTitle">{item.get('title')}</div>
             </div>
           )
         )

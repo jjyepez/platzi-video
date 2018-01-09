@@ -7,7 +7,8 @@ import Modal          from '../../widgets/components/modal'
 import HandleError    from '../../error/containers/handle-error'
 import VideoPlayer    from '../../player/containers/video-player'
 // --- redux
-import { connect } from 'react-redux'
+import { connect }      from 'react-redux'
+import { List as list } from 'immutable'
 
 class Home extends Component {
   state = {
@@ -38,11 +39,11 @@ class Home extends Component {
           handleRefHome = {this.setHomeRef}
         >
           <Related
-            myPlaylist = {this.props.extras.myPlaylist}
-            friends    = {this.props.extras.myFriends}
+            myPlaylist = {this.props.extras.get('myPlaylist')}
+            friends    = {this.props.extras.get('myFriends')}
           />
           <Categories
-            myUserInfo           = {this.props.extras.myUserInfo}
+            myUserInfo           = {this.props.extras.get('myUserInfo')}
             categories           = {this.props.categories}
             search               = {this.props.search}
             handleOpenModalClick = {this.handleOpenModal}
@@ -66,16 +67,24 @@ class Home extends Component {
 }
 
 function mapStateToProps ( state, props ){
-
-console.log( state )
-
-  const categories = state.data.categories.map( categoryId => {
-    return state.data.entities.categories[categoryId]
+  // --- ahora state es inmutable ... es un mapa, por lo que se deben usar metodos de mapas
+  // --- state.get(['data','categories']) es equivalente a
+  // --- state.get('data').get('categories')
+  const categories = state.getIn(['data','categories']).map( categoryId => {
+    return state.getIn(['data','entities','categories',categoryId])
   })
+  let searchResult = list()
+  const search     = state.getIn(['data','search'])
+  if( search ){
+    const mediaList = state.getIn(['data','entities','media'])
+    searchResult    = mediaList.filter( item => (
+      item.get('author').toLowerCase().includes( search.toLowerCase() )
+    )).toList()
+  }
   return {
+    extras    : state.getIn(['data','extras']),
     categories: categories,
-    extras: state.data.extras,
-    search: state.data.search
+    search    : searchResult.toJS()
   }
 }
 
