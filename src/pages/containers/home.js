@@ -9,16 +9,11 @@ import VideoPlayer    from '../../player/containers/video-player'
 // --- redux
 import { connect }      from 'react-redux'
 import { List as list } from 'immutable'
+import { closeModal }   from '../../actions' // -- /index.js
 
 class Home extends Component {
-  // state = {
-  //   modalVisible: false,
-  // }
-  handleOpenModal = media => {
-    this.setState({
-      modalVisible: true,
-      media // --- equivale a media: media
-    })
+  handleOpenModal = mediaId => {
+    // this.props.dispatch( openModal( mediaId ) )
     this.homeLayout.classList.add('blur')
     this.homeLayout.classList.add('gris')
   }
@@ -26,12 +21,7 @@ class Home extends Component {
     this.homeLayout = element
   }
   handleCloseModal = event => {
-    this.props.dispatch({
-      type: 'CLOSE_MODAL'
-    })
-    // this.setState({
-    //   modalVisible: false,
-    // })
+    this.props.dispatch( closeModal() )
     this.homeLayout.classList.remove('blur')
     this.homeLayout.classList.remove('gris')
   }
@@ -49,7 +39,7 @@ class Home extends Component {
             myUserInfo           = {this.props.extras.get('myUserInfo')}
             categories           = {this.props.categories}
             search               = {this.props.search}
-            handleOpenModalClick = {this.handleOpenModal}
+            // handleOpenModalClick = {this.handleOpenModal}
           />
           {
             this.props.modal.get('visibility') &&

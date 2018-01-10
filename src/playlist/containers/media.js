@@ -1,15 +1,12 @@
 import React, { Component } from 'react'
-import Media       from '../componentes/media'
-import { connect } from 'react-redux'
+import Media         from '../componentes/media'
+// --- Redux
+import { connect }   from 'react-redux'
+import { openModal } from '../../actions' // --- es equivalente a ../../actions/index.js ... porque index.js es el default
 
 class MediaContainer extends Component {
   openModal = mediaId => {
-    this.props.dispatch({ // --- disponible gracias a connect
-      type: 'OPEN_MODAL',
-      payload: {
-        mediaId
-      }
-    })
+    this.props.dispatch( openModal( mediaId ) ) // --- disponible gracias a connect
   }
   render(){
     return (
@@ -24,7 +21,6 @@ class MediaContainer extends Component {
 
 function mapStateToProps( state, props ){
   const mediaItem = state.getIn(['data','entities','media',props.id])
-// --- console.log( mediaItem )
   return {
     data: mediaItem
   }

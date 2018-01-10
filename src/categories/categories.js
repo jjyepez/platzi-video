@@ -34,7 +34,7 @@ function Categories(props){
                   cover     = {item.get('cover')}
                   author    = {item.get('author')}
                   src       = {item.get('src')}
-                  openModal = {props.handleOpenModalClick}
+                  // openModal = {props.handleOpenModalClick}
                 />
               )
             }
