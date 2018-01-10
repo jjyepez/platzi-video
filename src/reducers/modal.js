@@ -11,10 +11,13 @@ function modalReducer( state = initialState, action ){
 
   switch ( action.type ) {
     case 'OPEN_MODAL':
-      return state
+      return state.merge({
+				visibility: true,
+				mediaId: action.payload.mediaId
+			})
       break;
-    case 'OPEN_MODAL':
-      return state
+    case 'CLOSE_MODAL':
+      return state.set('visibility', false)
       break;
     default:
       return state

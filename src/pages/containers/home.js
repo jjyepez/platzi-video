@@ -11,9 +11,9 @@ import { connect }      from 'react-redux'
 import { List as list } from 'immutable'
 
 class Home extends Component {
-  state = {
-    modalVisible: false,
-  }
+  // state = {
+  //   modalVisible: false,
+  // }
   handleOpenModal = media => {
     this.setState({
       modalVisible: true,
@@ -26,9 +26,12 @@ class Home extends Component {
     this.homeLayout = element
   }
   handleCloseModal = event => {
-    this.setState({
-      modalVisible: false,
+    this.props.dispatch({
+      type: 'CLOSE_MODAL'
     })
+    // this.setState({
+    //   modalVisible: false,
+    // })
     this.homeLayout.classList.remove('blur')
     this.homeLayout.classList.remove('gris')
   }
@@ -49,13 +52,14 @@ class Home extends Component {
             handleOpenModalClick = {this.handleOpenModal}
           />
           {
-            this.state.modalVisible &&
+            this.props.modal.get('visibility') &&
             <ModalContainer>
               <Modal handleClick = {this.handleCloseModal}>
                 <VideoPlayer
                   autoplay = {true}
-                  src   = {this.state.media.src}
-                  title = {this.state.media.title}
+                  mediaId = {this.props.modal.get('mediaId')}
+                  // src   = {this.state.media.src}
+                  // title = {this.state.media.title}
                 />
               </Modal>
             </ModalContainer>
@@ -84,7 +88,8 @@ function mapStateToProps ( state, props ){
   return {
     extras    : state.getIn(['data','extras']),
     categories: categories,
-    search    : searchResult
+    search    : searchResult,
+    modal     : state.get('modal')
   }
 }
 
