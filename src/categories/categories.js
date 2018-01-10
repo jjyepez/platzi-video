@@ -16,20 +16,24 @@ function Categories(props){
       </div>
       <Scroller>
         {
-          props.search.length > 0 && (
+          props.search.toJS().length > 0 && (
             <div className  = "Category-results">
               <h3 className = "Category-description">Resultados de la búsqueda</h3>
-              <h1 className = "Category-title">{props.search.length} coincidencia(s)</h1>
+              <h1 className = "Category-title">{props.search.toJS().length} coincidencia(s)</h1>
             </div>
           )
         }
         {
-          props.search.map( mediaId => {
+          props.search.map( item => {
             return (
                 <MediaContainer
                   className = "Media-resultados"
-                  key       = {mediaId}
-                  id        = {mediaId}
+                  key       = {item.get('id')}
+                  id        = {item.get('id')}
+                  title     = {item.get('title')}
+                  cover     = {item.get('cover')}
+                  author    = {item.get('author')}
+                  src       = {item.get('src')}
                   openModal = {props.handleOpenModalClick}
                 />
               )
@@ -39,7 +43,8 @@ function Categories(props){
         {
           props.categories.map( category => {
             return (
-            	<Category {...category.toJS()}
+            	<Category
+                {...category.toJS()}
             		key                  = {category.get('id')}
                 handleOpenModalClick = {props.handleOpenModalClick}
             	/>

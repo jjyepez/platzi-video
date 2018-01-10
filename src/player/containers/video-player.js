@@ -31,7 +31,7 @@ class VideoPlayerContainer extends Component {
   }
   componentDidMount(){
     this.setState({
-      playing: ! this.props.autoplay
+      playing: this.props.autoplay
     })
   }
   handleLoadedMetadata = event => {
@@ -135,6 +135,7 @@ class VideoPlayerContainer extends Component {
           autoplay = {this.props.autoplay}
           playing  = {this.state.playing}
           src      = {this.props.src}
+          handleClick = {this.togglePlay}
         />
         { this.state.loading && <Spinner /> }
       </VideoPlayerLayout>

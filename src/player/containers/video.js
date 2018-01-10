@@ -23,8 +23,10 @@ class Video extends Component {
       handleTimeUpdate,
       handleSeeking,
       handleSought,
-      handleReady
+      handleReady,
+      handleClick,
     } = this.props
+
     return (
       <div className = "Video">
         <video
@@ -36,6 +38,7 @@ class Video extends Component {
           onSeeking        = {handleSeeking}
           onSeeked         = {handleSought}
           onCanPlayThrough = {handleReady}
+          onClick          = {handleClick}
         />
       </div>
     )

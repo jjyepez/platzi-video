@@ -9,7 +9,7 @@ class Media extends PureComponent {
 	render() {
 		return (
 			<div
-				className = {'Media tarjeta ' + this.props.className}
+				className = {'Media tarjeta ' + this.props.className }
 				onClick   = {this.openModal}
 			>
 				<div className = "Media-cover">

@@ -1,6 +1,7 @@
 .Video {
   width: inherit;
   height: 100%;
+  cursor: pointer;
 }
 .Video video {
   width: inherit;

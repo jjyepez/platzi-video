@@ -84,7 +84,7 @@ function mapStateToProps ( state, props ){
   return {
     extras    : state.getIn(['data','extras']),
     categories: categories,
-    search    : searchResult.toJS()
+    search    : searchResult
   }
 }
 

@@ -9,8 +9,9 @@ function Playlist(props) {
           props.playlist.map( mediaId => {
             return (
               <MediaContainer
-                id     = {mediaId}
-                key    = {mediaId}
+                className = ''
+                id        = {mediaId}
+                key       = {mediaId}
                 openModal = {props.handleOpenModalClick}
               />
             )
