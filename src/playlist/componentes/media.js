@@ -5,6 +5,7 @@ import './media.css'
 class Media extends PureComponent {
 	openModal = event => {
 		this.props.openModal( this.props.id ) // --- viene de ...item.toJS()
+		this.props.openModalBlur()
 	}
 	render() {
 		return (

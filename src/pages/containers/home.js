@@ -12,8 +12,7 @@ import { List as list } from 'immutable'
 import { closeModal }   from '../../actions' // -- /index.js
 
 class Home extends Component {
-  handleOpenModal = mediaId => {
-    // this.props.dispatch( openModal( mediaId ) )
+  handleOpenModalBlur = () => {
     this.homeLayout.classList.add('blur')
     this.homeLayout.classList.add('gris')
   }
@@ -36,20 +35,20 @@ class Home extends Component {
             friends    = {this.props.extras.get('myFriends')}
           />
           <Categories
-            myUserInfo           = {this.props.extras.get('myUserInfo')}
-            categories           = {this.props.categories}
-            search               = {this.props.search}
-            // handleOpenModalClick = {this.handleOpenModal}
+            myUserInfo    = {this.props.extras.get('myUserInfo')}
+            categories    = {this.props.categories}
+            search        = {this.props.search}
+            openModalBlur = {this.handleOpenModalBlur}
           />
           {
             this.props.modal.get('visibility') &&
             <ModalContainer>
-              <Modal handleClick = {this.handleCloseModal}>
+              <Modal
+                handleClick = {this.handleCloseModal}
+              >
                 <VideoPlayer
                   autoplay = {true}
                   mediaId = {this.props.modal.get('mediaId')}
-                  // src   = {this.state.media.src}
-                  // title = {this.state.media.title}
                 />
               </Modal>
             </ModalContainer>

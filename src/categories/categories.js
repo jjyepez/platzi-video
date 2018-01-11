@@ -34,7 +34,7 @@ function Categories(props){
                   cover     = {item.get('cover')}
                   author    = {item.get('author')}
                   src       = {item.get('src')}
-                  // openModal = {props.handleOpenModalClick}
+                  openModalBlur = {props.openModalBlur}
                 />
               )
             }
@@ -45,8 +45,8 @@ function Categories(props){
             return (
             	<Category
                 {...category.toJS()}
-            		key                  = {category.get('id')}
-                handleOpenModalClick = {props.handleOpenModalClick}
+            		key           = {category.get('id')}
+                openModalBlur = {props.openModalBlur}
             	/>
             )
           })

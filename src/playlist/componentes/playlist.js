@@ -12,7 +12,7 @@ function Playlist(props) {
                 className = ''
                 id        = {mediaId}
                 key       = {mediaId}
-                openModal = {props.handleOpenModalClick}
+                openModalBlur = {props.openModalBlur}
               />
             )
           })

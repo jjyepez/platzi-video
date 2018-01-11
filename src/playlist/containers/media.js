@@ -7,6 +7,7 @@ import { openModal } from '../../actions' // --- es equivalente a ../../actions/
 class MediaContainer extends Component {
   openModal = mediaId => {
     this.props.dispatch( openModal( mediaId ) ) // --- disponible gracias a connect
+    this.props.openModalBlur()
   }
   render(){
     return (
@@ -14,6 +15,7 @@ class MediaContainer extends Component {
         { ...this.props.data.toJS() }
         className = {this.props.className}
         openModal = {this.openModal}
+        openModalBlur = {this.props.openModalBlur}
       />
     )
   }

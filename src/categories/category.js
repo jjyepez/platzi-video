@@ -9,7 +9,7 @@ function Category(props){
       <h1 className = "Category-title">{props.title}</h1>
     	<Playlist
         playlist = {props.playlist}
-        handleOpenModalClick = {props.handleOpenModalClick}
+        openModalBlur = {props.openModalBlur}
       />
     </div>
   )
