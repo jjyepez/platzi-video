@@ -7,16 +7,39 @@ import '../css/style.css'
 
 // --- Redux
 import { Provider }    from 'react-redux'
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 import reducer     		 from '../reducers/index'
 import data  from '../schemas/index.js'
 
 import { Map as map } from 'immutable' // --- se le coloca un alias en minusculas para verlo como funcion no como clase
 
+// ----- versión pre-ES6
+// function logger({ dispatch, getState }){
+// 	return ( next ) => {
+// 		return ( action ) => {
+// 			console.log( 'estado anterior:', getState().toJS() )
+// 			console.log( 'enviando acción:', action)
+// 			const rslt = next( action )
+// 			console.log( 'nuevo estado   :', getState().toJS() )
+// 			return rslt
+// 		}
+// 	}
+// }
+
+// --- versión ES6
+const logger = ({ dispatch, getState }) => next => action => {
+	console.log( 'estado anterior:', getState().toJS() )
+	console.log( 'enviando acción:', action)
+	const rslt = next( action )
+	console.log( 'nuevo estado   :', getState().toJS() )
+	return rslt
+}
+
 const store = createStore(
 	reducer,
 	map(), // --- se va a definir el estado inicial de cada reducer en su propio archivo js
-	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+	applyMiddleware( logger )
+	// window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 
 const $homeContainer = document.getElementById( 'home-container' )
