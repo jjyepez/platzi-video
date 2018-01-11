@@ -16,6 +16,8 @@ export function closeModal(){
 export function searchMedia( query ){
   return {
     type: 'SEARCH_MEDIA',
-    query
+    payload: {
+      query
+    }
   }
 }

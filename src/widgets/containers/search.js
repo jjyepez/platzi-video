@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import Search from '../components/search'
 // --- Redux
-import { connect } from 'react-redux'
+import { connect } 		 from 'react-redux'
+import { searchMedia } from '../../actions' // -- equivale a ../../actions/index.js
 
 class SearchContainer extends Component {
 	state = {
@@ -10,13 +11,8 @@ class SearchContainer extends Component {
 	// --- los metodos deben crearse como arrow functions .. no como funciones estandar para poder usar internamente -this-
 	handleSubmit = e => {
 		e.preventDefault()
-console.log( this.input.value )
-		this.props.dispatch({ // --- Redux - dispatch
-			type: 'SEARCH_VIDEO',
-			payload: {
-				query: this.input.value
-			}
-		})
+		console.log( this.input.value )
+		this.props.searchMedia( this.input.value ) // --- el Dispatch de Redux! .. simplificado
 	}
 	setInputRef = element => {
 		this.input = element
@@ -38,4 +34,8 @@ console.log( this.input.value )
 	}
 }
 
-export default connect()(SearchContainer) // --- Redux
+const mapDispatchToProps = {
+	searchMedia
+}
+
+export default connect( null, mapDispatchToProps )( SearchContainer ) // --- Redux

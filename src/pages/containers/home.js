@@ -20,7 +20,7 @@ class Home extends Component {
     this.homeLayout = element
   }
   handleCloseModal = event => {
-    this.props.dispatch( closeModal() )
+    this.props.closeModal() // --- uso simplificado equivalente a bindActionCreators de Redux. Clase 29 del curso de Platzi Redux
     this.homeLayout.classList.remove('blur')
     this.homeLayout.classList.remove('gris')
   }
@@ -82,4 +82,8 @@ function mapStateToProps ( state, props ){
   }
 }
 
-export default connect( mapStateToProps )( Home )
+const mapDispatchToProps = { // --- es una forma simplificada que remplaza el uso de bindActionCreators de Redux!
+    closeModal
+}
+
+export default connect( mapStateToProps, mapDispatchToProps )( Home )

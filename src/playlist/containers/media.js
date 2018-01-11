@@ -6,7 +6,7 @@ import { openModal } from '../../actions' // --- es equivalente a ../../actions/
 
 class MediaContainer extends Component {
   openModal = mediaId => {
-    this.props.dispatch( openModal( mediaId ) ) // --- disponible gracias a connect
+    this.props.openModal( mediaId ) // --- disponible gracias a connect
     this.props.openModalBlur()
   }
   render(){
@@ -28,4 +28,8 @@ function mapStateToProps( state, props ){
   }
 }
 
-export default connect( mapStateToProps )(MediaContainer)
+const mapDispatchToProps = { // --- es una forma simplificada que remplaza el uso de bindActionCreators de Redux!
+    openModal
+}
+
+export default connect( mapStateToProps, mapDispatchToProps )(MediaContainer)
