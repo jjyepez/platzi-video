@@ -14,6 +14,7 @@ import { Map as map } from 'immutable' // --- se le coloca un alias en minuscula
 
 // --- Middlewares
 import logger 						     from 'redux-logger'
+import thunk  						     from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
 
 // ----- versión pre-ES6
@@ -30,13 +31,13 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 // }
 
 // --- versión ES6
-const logger_ = ({ dispatch, getState }) => next => action => {
-	console.log( 'estado anterior:', getState().toJS() )
-	console.log( 'enviando acción:', action)
-	const rslt = next( action )
-	console.log( 'nuevo estado   :', getState().toJS() )
-	return rslt
-}
+// const logger_ = ({ dispatch, getState }) => next => action => {
+// 	console.log( 'estado anterior:', getState().toJS() )
+// 	console.log( 'enviando acción:', action)
+// 	const rslt = next( action )
+// 	console.log( 'nuevo estado   :', getState().toJS() )
+// 	return rslt
+// }
 
 const store = createStore(
 	reducer,
@@ -44,7 +45,7 @@ const store = createStore(
 	composeWithDevTools(
 		applyMiddleware(
 			logger,
-			logger_
+			thunk
 		)
 	)
 	// window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() // --- requiere la extensión/plugin instalada en el navegador!

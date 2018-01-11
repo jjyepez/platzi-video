@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Search from '../components/search'
 // --- Redux
 import { connect } 		 from 'react-redux'
-import { searchMedia } from '../../actions' // -- equivale a ../../actions/index.js
+import { searchAsyncMedia } from '../../actions' // -- equivale a ../../actions/index.js
 
 class SearchContainer extends Component {
 	state = {
@@ -12,7 +12,7 @@ class SearchContainer extends Component {
 	handleSubmit = e => {
 		e.preventDefault()
 		console.log( this.input.value )
-		this.props.searchMedia( this.input.value ) // --- el Dispatch de Redux! .. simplificado
+		this.props.searchAsyncMedia( this.input.value ) // --- el Dispatch de Redux! .. simplificado
 	}
 	setInputRef = element => {
 		this.input = element
@@ -35,7 +35,7 @@ class SearchContainer extends Component {
 }
 
 const mapDispatchToProps = {
-	searchMedia
+	searchAsyncMedia
 }
 
 export default connect( null, mapDispatchToProps )( SearchContainer ) // --- Redux
